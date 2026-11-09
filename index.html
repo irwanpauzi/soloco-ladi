@@ -179,6 +179,29 @@ section{width:100%}
 .jamin .a .t{font-size:15px;font-weight:800;line-height:1.25;margin:6px 0 0}
 #pakej .tc{font-size:14px;color:#C9A9A9;text-align:center;margin:10px 0 0}
 
+.tamat{font-weight:800;font-size:17px;color:#8A0000;margin:12px 0 6px}
+.tamat2{font-weight:800;font-size:18px;color:#fff;text-align:center;margin:18px 0 8px}
+.jam{display:flex;justify-content:center;gap:10px}
+.jam .o{width:84px;border-radius:12px;padding:8px 0 6px;text-align:center}
+.jam span{display:block;font-family:'Anton',sans-serif;font-size:40px;line-height:1}
+.jam i{display:block;font-style:normal;font-weight:800;font-size:13px;margin:4px 0 0}
+.jam-terang .o{background:#120405;color:#FFC93C}
+.jam-terang i{color:#fff}
+.jam-gelap .o{background:#FFC93C;color:#120405}
+.jam-gelap i{color:#120405}
+.bump-hint{font-size:16px;font-weight:700;color:#FFC93C;text-align:center;margin:12px 0 0}
+.ringkas{background:#FFF6E0;border-radius:12px;padding:12px 14px;margin:0 0 4px;text-align:center}
+.rk-t{font-size:15px;font-weight:700;color:#8A0000}
+.rk-p{font-size:17px;font-weight:800;color:#120405;line-height:1.35;margin:4px 0 0}
+.rk-h{font-family:'Anton',sans-serif;font-size:36px;color:#E00000;line-height:1.1;margin:4px 0 0}
+.bump{background:#FFF3B0;border:3px dashed #E00000;border-radius:14px;padding:14px;margin:20px 0 0}
+.bump .bt{font-family:'Anton',sans-serif;font-size:22px;line-height:1.15;color:#E00000;text-align:center}
+.bump .bs{font-size:17px;color:#120405;margin:6px 0 10px;text-align:center}
+.bump .bc{display:flex;align-items:center;gap:10px;background:#fff;border-radius:10px;padding:10px 12px}
+.bump input{width:26px;height:26px;flex:0 0 26px;padding:0;accent-color:#E00000}
+.bump label{margin:0;font-size:18px;font-weight:800;color:#120405}
+@keyframes denyut{0%,100%{box-shadow:0 0 0 0 rgba(224,0,0,.0)}50%{box-shadow:0 0 0 6px rgba(224,0,0,.25)}}
+.kelip-lembut{animation:denyut 1.6s ease-in-out infinite}
 /* 10 BORANG */
 #borang{background:#FFC93C;color:#120405;padding:46px 0}
 #borang .tajuk{color:#120405;font-size:44px}
@@ -232,11 +255,17 @@ details p{font-size:18px;color:#333;margin:8px 0 0}
     <div class="s"><span class="n">3-5</span><div class="l">HARI TAHAN</div></div>
   </div>
   <div class="tawar">
-    <div class="k">HARGA HARI INI, PAKEJ TERLARIS</div>
+    <div class="k">HARGA HARI INI SAHAJA</div>
     <div class="gbt"><img src="https://cdn.jsdelivr.net/gh/irwanpauzi/soloco-ladi@5acf5f4c67b36e9b83899d1e9606971c67ad01be/img/pakej-terlaris.webp" alt="1 tin Soloco Candy + free MagicTisu" width="650" height="469"></div>
     <div class="asal">RM200</div>
     <div class="hrg">RM99</div>
     <div class="plus">+ FREE GIFT</div>
+    <p class="tamat">Harga RM99 tamat dalam:</p>
+    <div class="jam jam-terang" data-countdown data-countdown-daily="">
+      <div class="o"><span data-unit="hour">00</span><i>JAM</i></div>
+      <div class="o"><span data-unit="minute">00</span><i>MINIT</i></div>
+      <div class="o"><span data-unit="second">00</span><i>SAAT</i></div>
+    </div>
     <p class="terhad kelip">*Terhad kepada 50 pembeli terawal</p>
   </div>
   <div class="btn-wrap"><a class="btn nadi" href="#pakej" role="button">NAK YANG ORIGINAL!</a></div>
@@ -398,7 +427,7 @@ details p{font-size:18px;color:#333;margin:8px 0 0}
 <section id="pakej">
   <div class="in">
     <div class="c"><span class="kicker nadi">PERMINTAAN SANGAT TINGGI</span></div>
-    <h2 class="A c tajuk">PILIH PAKEJ, <span class="emas">AMBIL FREE GIFT</span></h2>
+    <h2 class="A c tajuk">TEMPAH HARI INI, <span class="emas">AMBIL FREE GIFT</span></h2>
 
     <div class="selamat">
       <div class="kad-s">
@@ -413,10 +442,16 @@ details p{font-size:18px;color:#333;margin:8px 0 0}
         <img src="https://w.ladicdn.com/64d0957e7550bc001218243b/cod-barang-sampai-baru-bayar-20251016172048-hc8ap.gif" alt="COD, barang sampai baru bayar" width="1030" height="1180">
       </div>
     </div>
+    <p class="tamat2">Harga hari ini tamat dalam:</p>
+    <div class="jam jam-gelap" data-countdown data-countdown-daily="">
+      <div class="o"><span data-unit="hour">00</span><i>JAM</i></div>
+      <div class="o"><span data-unit="minute">00</span><i>MINIT</i></div>
+      <div class="o"><span data-unit="second">00</span><i>SAAT</i></div>
+    </div>
     <div class="pk pk-top">
       <div class="c"><span class="lbl">PALING RAMAI PILIH</span></div>
-      <div class="nm c">PAKEJ TERLARIS</div>
-      <div class="tp c">1 Tin (12 biji) · kegunaan 20-30 hari</div>
+      <div class="nm c">1 TIN SOLOCO ORIGINAL</div>
+      <div class="tp c">12 biji · kegunaan 20-30 hari</div>
       <div class="gb"><img src="https://cdn.jsdelivr.net/gh/irwanpauzi/soloco-ladi@5acf5f4c67b36e9b83899d1e9606971c67ad01be/img/pakej-terlaris.webp" alt="1 tin Soloco Candy + free MagicTisu" width="650" height="469"></div>
       <div class="asal">RM200</div>
       <div class="hrg">RM99</div>
@@ -428,24 +463,7 @@ details p{font-size:18px;color:#333;margin:8px 0 0}
         <div class="baris"><svg class="ik" viewBox="0 0 28 28"><circle cx="14" cy="14" r="14" fill="#25A55F"/><path d="M8 14.5l4 4 8-9" stroke="#fff" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg><div class="tx">FREE penghantaran</div></div>
       </div>
       <a class="btn btn-emas nadi" href="#borang" role="button">YA, SAYA NAK!</a>
-    </div>
-
-    <div class="pk">
-      <div class="c"><span class="lbl">PALING JIMAT</span></div>
-      <div class="nm c">PAKEJ TERJIMAT</div>
-      <div class="tp c">2 Tin (24 biji) · kegunaan 30-45 hari</div>
-      <div class="gb"><img src="https://cdn.jsdelivr.net/gh/irwanpauzi/soloco-ladi@5acf5f4c67b36e9b83899d1e9606971c67ad01be/img/pakej-terjimat.webp" alt="2 tin Soloco Candy + free MagicTisu + kondom berduri" width="888" height="564"></div>
-      <div class="asal">RM400</div>
-      <div class="hrg">RM170</div>
-      <span class="jimat">JIMAT RM230</span>
-      <div class="sb">Cuma RM7.08 sebiji</div>
-      <div class="ls">
-        <div class="baris"><svg class="ik" viewBox="0 0 28 28"><circle cx="14" cy="14" r="14" fill="#25A55F"/><path d="M8 14.5l4 4 8-9" stroke="#fff" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg><div class="tx">2 Tin Soloco Candy (24 biji)</div></div>
-        <div class="baris"><svg class="ik" viewBox="0 0 28 28"><circle cx="14" cy="14" r="14" fill="#25A55F"/><path d="M8 14.5l4 4 8-9" stroke="#fff" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg><div class="tx">FREE 1 kotak MagicTisu</div></div>
-        <div class="baris"><svg class="ik" viewBox="0 0 28 28"><circle cx="14" cy="14" r="14" fill="#25A55F"/><path d="M8 14.5l4 4 8-9" stroke="#fff" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg><div class="tx">FREE 1 kondom berduri</div></div>
-        <div class="baris"><svg class="ik" viewBox="0 0 28 28"><circle cx="14" cy="14" r="14" fill="#25A55F"/><path d="M8 14.5l4 4 8-9" stroke="#fff" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg><div class="tx">FREE penghantaran</div></div>
-      </div>
-      <a class="btn" href="#borang" role="button">YA, SAYA NAK!</a>
+      <p class="bump-hint">Nak 2 tin? Ada tawaran istimewa dalam borang.</p>
     </div>
 
     <p class="terhad kelip">*Free gift terhad kepada 50 pembeli terawal di website ini</p>
@@ -464,12 +482,7 @@ details p{font-size:18px;color:#333;margin:8px 0 0}
     <p class="sub c">Ambil masa kurang 1 minit.</p>
     <div class="kad-borang">
       <form>
-        <label for="pakej-pilih">Pilih Pakej*</label>
-        <select id="pakej-pilih" name="pakej" required>
-          <option value="" disabled selected>Pilih pakej anda</option>
-          <option value="Pakej Terlaris RM99">Pakej Terlaris: 1 Tin (12 biji) RM99</option>
-          <option value="Pakej Terjimat RM170">Pakej Terjimat: 2 Tin (24 biji) RM170</option>
-        </select>
+        <div class="ringkas"><div class="rk-t">Pesanan anda:</div><div class="rk-p">1 Tin Soloco Original (12 biji) + FREE MagicTisu</div><div class="rk-h">RM99</div></div>
         <label for="nama">Nama*</label>
         <input id="nama" name="name" type="text" placeholder="Nama penuh" required>
         <label for="tel">No. Telefon*</label>
@@ -478,6 +491,11 @@ details p{font-size:18px;color:#333;margin:8px 0 0}
         <input id="alamat" name="address" type="text" placeholder="Alamat penuh" required>
         <label for="poskod">Poskod*</label>
         <input id="poskod" name="poskod" type="text" placeholder="Contoh: 43000" required>
+        <div class="bump kelip-lembut">
+          <p class="bt">TAWARAN DI BORANG INI SAHAJA</p>
+          <p class="bs">Tukar ke <b>2 TIN, RM170 sahaja</b>. Tambah RM71 je dapat 12 biji lagi + FREE kondom berduri. Jimat RM28 berbanding beli 2 kali.</p>
+          <div class="bc"><input id="naik" name="naik_2_tin" type="checkbox" value="YA - TUKAR KE 2 TIN RM170"><label for="naik">YA! Tukar ke 2 TIN, RM170 sahaja</label></div>
+        </div>
         <button type="submit">TEMPAH SEKARANG</button>
       </form>
     </div>
@@ -508,6 +526,7 @@ details p{font-size:18px;color:#333;margin:8px 0 0}
 
 </div>
 <script>
+document.querySelectorAll('[data-countdown]').forEach(function(c){function pad(n){return(n<10?'0':'')+n}function tick(){var n=new Date(),e=new Date(n);e.setHours(23,59,59,999);var t=Math.max(0,Math.floor((e-n)/1000));var v={hour:Math.floor(t/3600),minute:Math.floor(t%3600/60),second:t%60};c.querySelectorAll('[data-unit]').forEach(function(u){u.textContent=pad(v[u.dataset.unit])})}tick();setInterval(tick,1000)});
 document.querySelectorAll('[data-slide]').forEach(function(b){b.onclick=function(){document.getElementById(b.getAttribute('aria-controls')).scrollBy({left:(b.dataset.slide==='next'?1:-1)*272,behavior:'smooth'})}});
 </script>
 </body>
