@@ -211,6 +211,20 @@ section{width:100%}
 .jam-bump span{font-size:28px}
 .jam-bump i{font-size:11px;color:#fff}
 .bump .bg{max-width:260px;margin:8px auto 0}
+.bump-atas{background:#FFF3B0;background-color:#FFF3B0;border:3px dashed #E00000;border-bottom:0;border-radius:14px 14px 0 0;padding:14px 14px 6px;margin:20px 0 0}
+.bump-atas .bt{font-family:'Anton',sans-serif;font-size:22px;line-height:1.15;color:#E00000;text-align:center}
+.bump-atas .bs{font-size:17px;font-weight:600;color:#120405;margin:6px 0 0;text-align:center;line-height:1.45}
+.bump-atas .bg{max-width:260px;margin:8px auto 0}
+.bump-bawah{display:flex;align-items:center;gap:10px;background:#FFF3B0;background-color:#FFF3B0;border:3px dashed #E00000;border-top:0;border-radius:0 0 14px 14px;padding:8px 14px 14px}
+.bump-bawah input{width:26px;height:26px;flex:0 0 26px;padding:0;accent-color:#E00000}
+.bump-bawah label{margin:0;font-size:18px;font-weight:800;color:#120405}
+.jam-borang .o{background:#E00000;color:#fff}
+.jam-borang i{color:#fff}
+.jam-bump{margin:8px 0 0}
+.jam-bump .o{width:66px;background:#E00000;color:#fff;padding:6px 0 4px}
+.jam-bump span{font-size:28px}
+.jam-bump i{font-size:11px;color:#fff}
+.bump .bg{max-width:260px;margin:8px auto 0}
 .bump{background:#FFF3B0;border:3px dashed #E00000;border-radius:14px;padding:14px;margin:20px 0 0}
 .bump .bt{font-family:'Anton',sans-serif;font-size:22px;line-height:1.15;color:#E00000;text-align:center}
 .bump .bs{font-size:17px;color:#120405;margin:6px 0 10px;text-align:center}
@@ -513,12 +527,12 @@ details p{font-size:18px;color:#333;margin:8px 0 0}
         <input id="alamat" name="address" type="text" placeholder="Alamat penuh" required>
         <label for="poskod">Poskod*</label>
         <input id="poskod" name="poskod" type="text" placeholder="Contoh: 43000" required>
-        <div class="bump">
-          <p class="bt">TAWARAN UNTUK HARI INI SAHAJA</p>
+        <div class="bump-atas">
+          <div class="bt">TAWARAN UNTUK HARI INI SAHAJA</div>
           <div class="bg"><img src="https://cdn.jsdelivr.net/gh/irwanpauzi/soloco-ladi@5acf5f4c67b36e9b83899d1e9606971c67ad01be/img/pakej-terjimat.webp" alt="2 tin Soloco Candy + free MagicTisu + kondom berduri" width="888" height="564"></div>
-          <p class="bs">Tukar ke <b>2 TIN, RM170 sahaja</b>. Tambah RM71 je, dapat 12 biji lagi + kondom berduri PERCUMA. Jimat RM28 berbanding beli 2 kali.</p>
-          <div class="bc"><input id="naik" name="naik_2_tin" type="checkbox" value="YA! Tukar ke 2 TIN, RM170 sahaja"><label for="naik">YA! Tukar ke 2 TIN, RM170 sahaja</label></div>
+          <div class="bs">Tukar ke 2 TIN, RM170 sahaja. Tambah RM71 je, dapat 12 biji lagi + kondom berduri PERCUMA. Jimat RM28 berbanding beli 2 kali.</div>
         </div>
+        <div class="bump-bawah"><input id="naik" name="naik_2_tin" type="checkbox" value="YA! Tukar ke 2 TIN, RM170 sahaja"><label for="naik">YA! Tukar ke 2 TIN, RM170 sahaja</label></div>
         <div class="ringkas">
           <div class="rk-h">RINGKASAN PESANAN</div>
           <div class="rk-pro">
