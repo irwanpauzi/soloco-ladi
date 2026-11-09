@@ -9,215 +9,257 @@
 <link href="https://fonts.googleapis.com/css2?family=Anton&family=Be+Vietnam+Pro:wght@400;600;700;800&display=swap" rel="stylesheet">
 <style>
 *{box-sizing:border-box;margin:0;padding:0}
-body{font-family:'Be Vietnam Pro',sans-serif;background:#0B0B0B;color:#1A1A1A;font-size:18px;line-height:1.6}
+body{font-family:'Be Vietnam Pro',sans-serif;background:#120405;color:#fff;font-size:18px;line-height:1.6}
 img{display:block;max-width:100%;height:auto}
-#slc{max-width:420px;margin:0 auto;background:#fff}
+#slc{max-width:420px;margin:0 auto;background:#120405}
 section{width:100%}
-.in{margin:0 20px}
-.anton{font-family:'Anton',sans-serif;font-weight:400;line-height:1.12}
+.in{margin:0 18px}
+.A{font-family:'Anton',sans-serif;font-weight:400;line-height:1.05}
 .c{text-align:center}
-.pita{display:inline-block;background:#C70209;color:#fff;font-weight:800;font-size:15px;line-height:1.3;padding:7px 14px;border-radius:999px}
-.pita-emas{background:#D4A93A;color:#0B0B0B}
-.btn-tempah{display:block;background:#C70209;color:#fff;font-family:'Anton',sans-serif;font-size:24px;line-height:1.2;text-align:center;text-decoration:none;padding:16px 10px;border-radius:12px;box-shadow:0 6px 0 #7A0105;transition:.15s}
-.btn-tempah:active{transform:translateY(4px);box-shadow:0 2px 0 #7A0105}
-@keyframes breathe{0%,100%{transform:scale(1)}50%{transform:scale(1.04)}}
-.nadi{animation:breathe 2.2s ease-in-out infinite}
+.emas{color:#FFC93C}
+.merah{color:#FF2D2D}
+.kicker{display:inline-block;background:#FF2D2D;color:#fff;font-weight:800;font-size:15px;line-height:1.3;padding:7px 14px;border-radius:999px}
+.kicker-emas{background:#FFC93C;color:#120405}
+@keyframes breathe{0%,100%{transform:scale(1)}50%{transform:scale(1.05)}}
+.nadi{animation:breathe 1.8s ease-in-out infinite}
+@keyframes blinkSoft{0%,100%{opacity:1}50%{opacity:.35}}
+.kelip{animation:blinkSoft 1.2s ease-in-out infinite}
+.btn{display:block;background:#FF2D2D;background-color:#FF2D2D;color:#fff;font-family:'Anton',sans-serif;font-size:28px;line-height:1.15;text-align:center;text-decoration:none;padding:18px 10px;border-radius:14px;box-shadow:0 7px 0 #8A0000;transition:.15s}
+.btn:active{transform:translateY(5px);box-shadow:0 2px 0 #8A0000}
+.btn-emas{background:#FFC93C;background-color:#FFC93C;color:#120405;box-shadow:0 7px 0 #A67600}
+.btn-wrap{margin:26px 18px 0}
+.bawah-btn{font-size:15px;color:#E9CFCF;text-align:center;margin:10px 18px 0}
+.ik{flex:0 0 28px;width:28px;height:28px}
 .baris{display:flex;align-items:center;gap:12px;margin:12px 0 0}
-.baris .ik{flex:0 0 28px;width:28px;height:28px}
-.baris .tx{font-size:19px;font-weight:700;line-height:1.3}
+.baris .tx{font-size:20px;font-weight:800;line-height:1.3}
+
+/* jalur atas (marquee) */
+.jalur{background:#FFC93C;overflow:hidden;padding:9px 0}
+.jalur-tr{display:flex;gap:28px;width:max-content;animation:lari 18s linear infinite}
+.jalur-tr div{font-weight:800;font-size:15px;color:#120405;white-space:nowrap}
+@keyframes lari{to{transform:translateX(-50%)}}
 
 /* 1 HERO */
-#hero{background:#0B0B0B;color:#fff;padding:22px 0 34px}
-#hero .dulu{font-size:18px;color:#BDBDBD;margin:16px 0 0}
-#hero .lama{font-family:'Anton',sans-serif;font-size:30px;line-height:1.15;color:#8A8A8A;text-decoration:line-through;margin:2px 0 0}
-#hero .kini{font-size:18px;color:#fff;font-weight:700;margin:14px 0 0}
-#hero h1{font-size:44px;color:#F2C14E;margin:2px 0 0}
-#hero .sub{font-size:19px;color:#E6E6E6;margin:14px 20px 0}
-#hero .foto{margin:6px 0 0}
-.kelebihan{margin:0 20px}
-.kelebihan .k{background:#fff;color:#0B0B0B;border-radius:12px;padding:12px 14px;margin:10px 0 0;display:flex;align-items:center;gap:12px}
-.kelebihan .k .ik{flex:0 0 28px;width:28px;height:28px}
-.kelebihan .k .tx{font-size:19px;font-weight:800;line-height:1.3}
-.amanah{display:grid;grid-template-columns:1fr 1fr 1fr;gap:8px;margin:18px 20px 0}
-.amanah .a{background:#1C1C1C;border:1.5px solid #D4A93A;border-radius:12px;padding:10px 6px;text-align:center}
-.amanah .a svg{width:30px;height:30px;margin:0 auto}
-.amanah .a .t{font-size:15px;font-weight:800;color:#F2C14E;line-height:1.25;margin:6px 0 0}
+#hero{background:#120405;padding:0 0 40px}
+.kad-hero{height:600px;justify-content:flex-end;border-radius:0;padding:22px 16px 18px}
+#hero .soal{font-size:19px;color:#E8CACA;margin:18px 0 0}
+#hero .lama{font-family:'Anton',sans-serif;font-size:34px;line-height:1.1;color:#B58A8A;text-decoration:line-through;margin:4px 0 0}
+#hero .kini{font-size:19px;font-weight:800;margin:14px 0 0}
+#hero h1{font-size:62px;color:#FFC93C;margin:4px 0 0}
+#hero .sub{font-size:20px;color:#F3E6E6;margin:6px 18px 22px}
+.tawar .gbt{max-width:280px;margin:10px auto 0}
+.kok img{border-radius:12px;margin:0 0 14px}
+.stat3{display:grid;grid-template-columns:1fr 1fr 1fr;gap:8px;margin:0 18px}
+.stat3 .s{background:#2A0A0B;border:2px solid #FF2D2D;border-radius:14px;padding:12px 4px;text-align:center}
+.stat3 .n{display:inline-block;font-family:'Anton',sans-serif;font-size:40px;line-height:1;color:#FFC93C}
+.stat3 .l{font-size:15px;font-weight:800;color:#fff;line-height:1.25;margin:6px 0 0}
+.tawar{background:#FFF6E0;color:#120405;border:3px solid #FFC93C;border-radius:18px;padding:18px 16px;margin:22px 18px 0;text-align:center}
+.tawar .k{font-weight:800;font-size:16px;color:#8A0000}
+.tawar .asal{font-family:'Anton',sans-serif;font-size:30px;color:#9A8A8A;text-decoration:line-through;line-height:1.1;margin:6px 0 0}
+.tawar .hrg{font-family:'Anton',sans-serif;font-size:72px;line-height:1;color:#E00000}
+.tawar .plus{display:inline-block;background:#120405;color:#FFC93C;font-family:'Anton',sans-serif;font-size:24px;line-height:1.2;padding:6px 16px;border-radius:10px;margin:8px 0 0}
+.tawar .terhad{font-weight:800;font-size:17px;color:#E00000;margin:10px 0 0}
+
+/* tajuk seksyen */
+.tajuk{font-size:46px;margin:12px 0 0}
 
 /* 2 MASALAH */
-#masalah{background:#1E0708;color:#fff;padding:40px 0 0}
-#masalah h2{font-size:32px;color:#fff}
-#masalah h2 .merah{color:#FF3B3B}
-.soal{background:#2E0D0E;border:2px solid #C70209;border-radius:16px;padding:16px 18px;margin:20px 0 0}
-.soal .baris .tx{color:#fff}
-#masalah p{font-size:19px;color:#EADCDC;margin:18px 0 0}
-#masalah .foto{margin:22px 0 0}
-#masalah h3{font-size:28px;color:#fff;margin:6px 0 0}
-#masalah h3 .emas{color:#F2C14E}
-.grid2{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:18px 0 0}
-.kad-punca{background:#0B0B0B;border-radius:14px;overflow:hidden}
-.kad-punca .lb{background:#F2C14E;color:#0B0B0B;font-family:'Anton',sans-serif;font-size:20px;line-height:1.2;text-align:center;padding:9px 6px}
-#masalah .bawah{padding:0 0 40px}
+#masalah{background:#1E0607;padding:46px 0 46px}
+.senarai{background:#2A0A0B;border-left:6px solid #FF2D2D;border-radius:14px;padding:12px 16px 18px;margin:20px 0 0}
+.kad{display:flex;flex-direction:column;justify-content:flex-end;border-radius:18px;padding:18px;background-color:#120405;background-size:cover;background-position:center;background-repeat:no-repeat}
+.kad .t{font-family:'Anton',sans-serif;font-size:32px;line-height:1.08;color:#fff}
+.kad .s{font-size:17px;font-weight:700;color:#FFC93C;margin:6px 0 0}
+.kad-malu{height:440px;margin:22px 0 0}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:16px 0 0}
+.kp{height:190px;padding:12px}
+.kp .no{display:inline-block;background:#FF2D2D;color:#fff;font-family:'Anton',sans-serif;font-size:20px;line-height:1;padding:6px 10px;border-radius:8px}
+.kp .t{font-size:24px;margin:8px 0 0}
+#masalah .sub2{font-size:24px;margin:30px 0 0}
 
 /* 3 CARA LAMA */
-#caralama{background:#fff;padding:44px 0}
-#caralama h2{font-size:32px;color:#0B0B0B}
-#caralama h2 .merah{color:#C70209}
-.kad-x{background:#F6F6F6;border-radius:14px;padding:16px;margin:14px 0 0;display:flex;gap:14px;align-items:flex-start}
-.kad-x .ik{flex:0 0 32px;width:32px;height:32px}
-.kad-x .t{font-family:'Anton',sans-serif;font-size:22px;line-height:1.2;color:#0B0B0B}
-.kad-x .s{font-size:18px;color:#444;margin:4px 0 0}
-.kad-ok{background:#0D4538;border-radius:14px;padding:18px;margin:18px 0 0;display:flex;gap:14px;align-items:flex-start}
-.kad-ok .ik{flex:0 0 32px;width:32px;height:32px}
-.kad-ok .t{font-family:'Anton',sans-serif;font-size:24px;line-height:1.2;color:#F2C14E}
-.kad-ok .s{font-size:18px;color:#fff;margin:4px 0 0}
+#caralama{background:#FFF6E0;color:#120405;padding:46px 0}
+#caralama .tajuk{color:#120405}
+.kx{background:#fff;border-radius:16px;padding:16px;margin:14px 0 0;display:flex;gap:14px;align-items:flex-start;box-shadow:0 10px 26px -14px rgba(60,0,0,.5)}
+.kx .ik{flex:0 0 34px;width:34px;height:34px}
+.kx .t{font-family:'Anton',sans-serif;font-size:26px;line-height:1.1;color:#120405}
+.kx .s{font-size:18px;color:#4A3A3A;margin:4px 0 0}
+.tag{display:inline-block;background:#FF2D2D;color:#fff;font-weight:800;font-size:13px;padding:4px 10px;border-radius:6px;margin:8px 0 0}
+.kok{background:#120405;border-radius:18px;padding:20px;margin:20px 0 0;border:3px solid #FFC93C}
+.kok .t{font-family:'Anton',sans-serif;font-size:34px;line-height:1.08;color:#FFC93C}
+.kok .s{font-size:19px;color:#fff;margin:8px 0 0}
 
 /* 4 ORIGINAL */
-#original{background:#0B0B0B;color:#fff;padding:44px 0}
-#original h2{font-size:34px;color:#fff;margin:14px 0 0}
-#original h2 .emas{color:#F2C14E}
-#original .foto{margin:20px 0 0;border-radius:18px;overflow:hidden}
-#original h3{font-size:24px;color:#F2C14E;margin:24px 0 0}
-#original .baris .tx{color:#fff}
-.awas{background:#2E0D0E;border:2px dashed #F2C14E;border-radius:16px;padding:16px;margin:22px 0 0}
-.awas .t{font-family:'Anton',sans-serif;font-size:24px;color:#FF3B3B;text-align:center}
-.awas .s{font-size:18px;color:#fff;margin:8px 0 0;text-align:center}
+#original{background:#120405;padding:46px 0}
+.kad-ori{height:500px;margin:20px 0 0}
+.ciri{margin:18px 0 0}
+.awas{background:#FF2D2D;border-radius:16px;padding:16px;margin:20px 0 0;text-align:center}
+.awas .t{font-family:'Anton',sans-serif;font-size:32px;line-height:1.1;color:#fff}
+.awas .s{font-size:18px;color:#fff;font-weight:600;margin:6px 0 0}
 
-/* 5 BAHAN */
-#bahan{background:#FFF8EC;padding:44px 0}
-#bahan h2{font-size:32px;color:#0B0B0B}
+/* 5 FAEDAH */
+#faedah{background:#1E0607;padding:46px 0}
+.bento{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:20px 0 0}
+.kf{height:250px;padding:12px}
+.kf .t{font-size:26px}
+.kf .s{font-size:15px}
+.besar{background:#FFC93C;color:#120405;border-radius:18px;padding:20px;margin:16px 0 0;text-align:center}
+.besar .n{display:inline-block;font-family:'Anton',sans-serif;font-size:88px;line-height:1;color:#B00000}
+.besar .l{font-family:'Anton',sans-serif;font-size:28px;line-height:1.1;margin:4px 0 0}
+.besar .q{font-size:17px;font-style:italic;margin:10px 0 0}
+.besar .o{font-size:14px;font-weight:800;margin:4px 0 0}
+
+/* 6 MASA */
+#masa{background:#120405;padding:46px 0}
+.tl{border-left:4px solid #FF2D2D;margin:22px 0 0 10px;padding:0 0 0 18px}
+.tl .m{margin:0 0 22px}
+.tl .w{font-family:'Anton',sans-serif;font-size:40px;line-height:1;color:#FFC93C}
+.tl .q{font-size:19px;font-style:italic;color:#fff;margin:6px 0 0}
+.tl .o{font-size:14px;font-weight:700;color:#C9A9A9;margin:4px 0 0}
+.langkah{display:grid;grid-template-columns:1fr 1fr 1fr;gap:8px;margin:10px 0 0}
+.langkah .l{background:#2A0A0B;border:2px solid #FFC93C;border-radius:14px;padding:12px 4px;text-align:center}
+.langkah .n{display:inline-block;font-family:'Anton',sans-serif;font-size:40px;line-height:1;color:#FFC93C}
+.langkah .t{font-size:16px;font-weight:800;line-height:1.25;margin:6px 0 0}
+
+/* 7 BAHAN */
+#bahan{background:#FFF6E0;color:#120405;padding:46px 0}
+#bahan .tajuk{color:#120405}
 #bahan .foto{margin:18px 0 0;border-radius:18px;overflow:hidden}
 .chip{display:flex;flex-wrap:wrap;justify-content:center;gap:8px;margin:16px 0 0}
-.chip .b{background:#fff;border:1.5px solid #D4A93A;color:#5A3B00;font-weight:700;font-size:17px;line-height:1.2;padding:8px 13px;border-radius:999px}
-.bukti-usm{background:#fff;border-radius:16px;padding:18px;margin:22px 0 0;box-shadow:0 8px 24px rgba(0,0,0,.08)}
-.bukti-usm .t{font-weight:800;font-size:19px;line-height:1.35;color:#0D4538}
-.bukti-usm .s{font-size:17px;color:#444;margin:6px 0 12px}
+.chip .b{background:#120405;color:#FFC93C;font-weight:800;font-size:17px;line-height:1.2;padding:9px 14px;border-radius:999px}
+.usm{background:#fff;border-radius:16px;padding:16px;margin:20px 0 0;box-shadow:0 10px 26px -14px rgba(60,0,0,.5)}
+.usm .t{font-family:'Anton',sans-serif;font-size:26px;line-height:1.1;color:#0D4538}
+.usm .s{font-size:17px;color:#444;margin:6px 0 12px}
 
-/* 6 BEZA */
-#beza{background:#C70209;color:#fff;padding:44px 0}
-#beza h2{font-size:32px;color:#fff}
-.masa{background:#fff;color:#1A1A1A;border-radius:14px;padding:14px 16px;margin:14px 0 0;display:flex;gap:14px;align-items:flex-start}
-.masa .w{flex:0 0 84px;background:#0B0B0B;color:#F2C14E;font-family:'Anton',sans-serif;font-size:20px;line-height:1.15;text-align:center;border-radius:10px;padding:10px 4px}
-.masa .q{font-size:18px;font-style:italic;line-height:1.45}
-.masa .o{font-size:15px;font-weight:700;color:#8E2526;margin:4px 0 0}
-#beza .foto{margin:22px 0 0;border-radius:18px;overflow:hidden}
-#beza h3{font-size:28px;color:#fff;margin:26px 0 0}
-.langkah{display:grid;grid-template-columns:1fr 1fr 1fr;gap:8px;margin:14px 0 0}
-.langkah .l{background:#0B0B0B;border-radius:12px;padding:12px 6px;text-align:center}
-.langkah .n{display:inline-block;font-family:'Anton',sans-serif;font-size:34px;line-height:1;color:#F2C14E}
-.langkah .t{font-size:16px;font-weight:800;color:#fff;line-height:1.25;margin:6px 0 0}
-
-/* 7 BUKTI */
-#bukti{background:#fff;padding:44px 0}
-#bukti h2{font-size:32px;color:#0B0B0B}
-#bukti h2 .merah{color:#C70209}
-.wa{border-radius:14px;overflow:hidden;margin:16px 0 0;box-shadow:0 6px 18px rgba(0,0,0,.12)}
-#bukti .swipe{font-size:18px;font-weight:700;text-align:center;margin:28px 0 0}
+/* 8 BUKTI */
+#bukti{background:#fff;color:#120405;padding:46px 0}
+#bukti .tajuk{color:#120405}
+.wa{border-radius:14px;overflow:hidden;margin:16px 0 0;box-shadow:0 10px 26px -12px rgba(0,0,0,.35)}
+.cap{background:#FF2D2D;color:#fff;font-family:'Anton',sans-serif;font-size:26px;line-height:1.12;text-align:center;padding:12px 12px;border-radius:14px 14px 0 0;margin:24px 0 0}
+.wa-cap{margin:0;border-radius:0 0 14px 14px}
+.cap-sl{background:#FF2D2D;color:#fff;font-family:'Anton',sans-serif;font-size:20px;line-height:1.15;text-align:center;padding:10px 8px}
+#bukti .swipe{font-size:19px;font-weight:800;text-align:center;margin:26px 0 0}
 .tr-wrap{margin:14px 0 0}
-.tr{display:flex;gap:12px;overflow-x:auto;scroll-snap-type:x mandatory;padding:0 20px 6px}
+.tr{display:flex;gap:12px;overflow-x:auto;scroll-snap-type:x mandatory;padding:0 18px 6px}
 .sl{flex:0 0 260px;scroll-snap-align:center;border-radius:14px;overflow:hidden;border:1px solid #ddd}
 .nav-tr{display:flex;justify-content:center;gap:12px;margin:14px 0 0}
-.nav-tr button{background:#0B0B0B;color:#fff;border:0;font-family:'Be Vietnam Pro',sans-serif;font-weight:700;font-size:17px;padding:10px 18px;border-radius:999px}
-#bukti .lihat{margin:28px 20px 0}
+.nav-tr button{background:#120405;color:#fff;border:0;font-family:'Be Vietnam Pro',sans-serif;font-weight:800;font-size:17px;padding:10px 18px;border-radius:999px}
+#bukti .bawah-btn{color:#555}
 
-/* 8 PAKEJ */
-#pakej{background:#FFF8EC;padding:44px 0}
-#pakej h2{font-size:34px;color:#0B0B0B;margin:14px 0 0}
-#pakej h2 .merah{color:#C70209}
-#pakej .peringatan{font-size:17px;color:#5A1A1A;font-weight:600;text-align:center;margin:10px 0 0}
-.pk{background:#fff;border:2px solid #E5D3B0;border-radius:18px;padding:22px 18px;margin:22px 0 0}
-.pk-top{background:#0B0B0B;border:3px solid #D4A93A;color:#fff}
-.pk .lbl{display:inline-block;font-weight:800;font-size:15px;padding:6px 12px;border-radius:999px;background:#0D4538;color:#fff}
-.pk-top .lbl{background:#D4A93A;color:#0B0B0B}
-.pk .nm{font-family:'Anton',sans-serif;font-size:30px;line-height:1.15;margin:10px 0 0}
-.pk .tp{font-size:17px;margin:2px 0 0;color:#666}
-.pk-top .tp{color:#CFCFCF}
+/* 9 PAKEJ */
+#pakej{background:#1E0607;padding:46px 0}
+.pk{background:#fff;color:#120405;border-radius:20px;padding:22px 18px;margin:20px 0 0}
+.pk-top{background:#120405;color:#fff;border:4px solid #FFC93C}
+.pk .lbl{display:inline-block;font-weight:800;font-size:15px;padding:6px 14px;border-radius:999px;background:#0D4538;color:#fff}
+.pk-top .lbl{background:#FFC93C;color:#120405}
+.pk .nm{font-family:'Anton',sans-serif;font-size:34px;line-height:1.1;margin:10px 0 0}
+.pk .tp{font-size:17px;margin:4px 0 0;color:#666}
+.pk-top .tp{color:#D9C2C2}
 .pk .gb{margin:14px auto 0;max-width:300px}
 .pk .gb-kecil{max-width:220px}
-.pk .asal{font-size:18px;color:#888;text-decoration:line-through;margin:10px 0 0;text-align:center}
-.pk .hrg{font-family:'Anton',sans-serif;font-size:56px;line-height:1.05;color:#C70209;text-align:center}
-.pk-top .hrg{color:#F2C14E}
-.pk .jimat{display:block;background:#C70209;color:#fff;font-weight:800;font-size:17px;text-align:center;padding:6px 10px;border-radius:8px;margin:6px auto 0;max-width:220px}
-.pk .sb{font-size:17px;font-weight:700;text-align:center;margin:6px 0 0;color:#0D4538}
-.pk-top .sb{color:#9BE3B9}
-.pk .ls{margin:14px 0 16px}
+.pk .asal{font-family:'Anton',sans-serif;font-size:28px;color:#9A8A8A;text-decoration:line-through;line-height:1.1;margin:10px 0 0;text-align:center}
+.pk .hrg{font-family:'Anton',sans-serif;font-size:76px;line-height:1;color:#E00000;text-align:center}
+.pk-top .hrg{color:#FFC93C}
+.pk .jimat{display:block;background:#FF2D2D;color:#fff;font-weight:800;font-size:18px;text-align:center;padding:7px 10px;border-radius:8px;margin:6px auto 0;max-width:230px}
+.pk .sb{font-size:18px;font-weight:800;text-align:center;margin:8px 0 0;color:#0D4538}
+.pk-top .sb{color:#8CF0B5}
+.pk .ls{margin:14px 0 18px}
 .pk .ls .baris{margin:9px 0 0}
-.pk .ls .baris .ik{flex:0 0 22px;width:22px;height:22px}
-.pk .ls .baris .tx{font-size:18px;font-weight:600;color:#1A1A1A}
-.pk-top .ls .baris .tx{color:#fff}
-#pakej .terhad{font-size:17px;font-weight:800;color:#C70209;text-align:center;margin:16px 0 0}
-.jamin{display:grid;grid-template-columns:1fr 1fr 1fr;gap:8px;margin:22px 0 0}
-.jamin .a{background:#0D4538;border-radius:12px;padding:12px 6px;text-align:center}
-.jamin .a svg{width:30px;height:30px;margin:0 auto}
-.jamin .a .t{font-size:15px;font-weight:800;color:#fff;line-height:1.25;margin:6px 0 0}
-#pakej .tc{font-size:15px;color:#555;text-align:center;margin:10px 0 0}
+.pk .ls .ik{flex:0 0 24px;width:24px;height:24px}
+.pk .ls .tx{font-size:19px;font-weight:700}
+.kad-s{background:#2A0A0B;border:2px solid #FFC93C;border-radius:18px;padding:18px;margin:20px 0 0}
+.kad-s .t{font-family:'Anton',sans-serif;font-size:32px;line-height:1.08;color:#fff;text-align:center}
+.kad-s .s{font-size:18px;color:#F3E6E6;text-align:center;margin:8px 0 14px}
+.kad-s img{border-radius:12px;max-width:300px;margin:0 auto}
+#pakej .terhad{font-size:18px;font-weight:800;color:#FFC93C;text-align:center;margin:18px 0 0}
+.jamin{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin:20px 0 0}
+.jamin .a{background:#2A0A0B;border:2px solid #FFC93C;border-radius:12px;padding:12px 4px;text-align:center}
+.jamin .a svg{width:32px;height:32px;margin:0 auto}
+.jamin .a .t{font-size:15px;font-weight:800;line-height:1.25;margin:6px 0 0}
+#pakej .tc{font-size:14px;color:#C9A9A9;text-align:center;margin:10px 0 0}
 
-/* 9 BORANG */
-#borang{background:#F1F3F4;padding:44px 0}
-#borang h2{font-size:34px;color:#0B0B0B}
-#borang .sub{font-size:19px;font-weight:700;color:#0D4538;margin:6px 0 0}
-.kad-borang{background:#fff;border-radius:18px;padding:22px 18px;margin:20px 0 0;box-shadow:0 8px 24px rgba(0,0,0,.08)}
-form label{display:block;font-weight:700;font-size:17px;margin:14px 0 6px;color:#1A1A1A}
-form input,form select{width:100%;font-family:'Be Vietnam Pro',sans-serif;font-size:18px;padding:13px 14px;border:1.5px solid #CFCFCF;border-radius:10px;background:#fff;color:#1A1A1A}
-form button{display:block;width:100%;margin:20px 0 0;background:#C70209;color:#fff;border:0;font-family:'Be Vietnam Pro',sans-serif;font-weight:800;font-size:22px;padding:16px;border-radius:12px}
-#borang .nota{font-size:17px;color:#555;margin:14px 0 0;text-align:center}
+/* 10 BORANG */
+#borang{background:#FFC93C;color:#120405;padding:46px 0}
+#borang .tajuk{color:#120405;font-size:44px}
+#borang .sub{font-size:20px;font-weight:800;color:#8A0000;margin:6px 0 0}
+.kad-borang{background:#fff;border-radius:20px;padding:22px 18px;margin:20px 0 0;box-shadow:0 14px 34px -14px rgba(60,0,0,.6)}
+form label{display:block;font-weight:800;font-size:17px;margin:14px 0 6px;color:#120405}
+form input,form select{width:100%;font-family:'Be Vietnam Pro',sans-serif;font-size:18px;padding:14px;border:2px solid #E2CFCF;border-radius:12px;background:#fff;color:#120405}
+form button{display:block;width:100%;margin:22px 0 0;background:#FF2D2D;color:#fff;border:0;font-family:'Be Vietnam Pro',sans-serif;font-weight:800;font-size:24px;padding:18px;border-radius:14px}
+#borang .nota{font-size:17px;font-weight:600;margin:14px 0 0;text-align:center}
 
-/* 10 FAQ */
-#faq{background:#fff;padding:44px 0}
-#faq h2{font-size:30px;color:#0B0B0B}
-.kad-faq{background:#F7F7F7;border-radius:18px;padding:10px 14px;margin:18px 0 0}
+/* 11 FAQ */
+#faq{background:#fff;color:#120405;padding:46px 0}
+#faq .tajuk{color:#120405;font-size:38px}
+.kad-faq{background:#FFF6E0;border-radius:18px;padding:10px 14px;margin:18px 0 0}
 details{background:#fff;border-radius:12px;padding:14px 16px;margin:8px 0}
-summary{font-weight:800;font-size:18px;color:#0B0B0B;cursor:pointer}
+summary{font-weight:800;font-size:18px;color:#120405;cursor:pointer}
 details p{font-size:18px;color:#333;margin:8px 0 0}
-#penutup{background:#0B0B0B;color:#fff;padding:36px 0}
-#penutup .nm{font-family:'Anton',sans-serif;font-size:28px;color:#F2C14E;text-align:center}
-#penutup .d{font-size:13px;color:#999;margin:14px 0 0;text-align:center}
+#penutup{background:#120405;padding:34px 0}
+#penutup .nm{font-family:'Anton',sans-serif;font-size:30px;color:#FFC93C;text-align:center}
+#penutup .d{font-size:13px;color:#8F7777;margin:14px 0 0;text-align:center}
 </style>
 </head>
 <body>
 <div id="slc">
 
+<!-- JALUR -->
+<section id="jalur">
+  <div class="jalur">
+    <div class="jalur-tr" role="marquee">
+      <div>ORIGINAL HQ</div><div>•</div><div>COD SELURUH MALAYSIA</div><div>•</div><div>POS KE OFIS PUN TAK KANTOI</div><div>•</div><div>FREE GIFT HARI INI</div><div>•</div>
+      <div>ORIGINAL HQ</div><div>•</div><div>COD SELURUH MALAYSIA</div><div>•</div><div>POS KE OFIS PUN TAK KANTOI</div><div>•</div><div>FREE GIFT HARI INI</div><div>•</div>
+    </div>
+  </div>
+</section>
+
 <!-- 1 HERO -->
 <section id="hero">
-  <div class="in c"><span class="pita">SOLOCO CANDY ORIGINAL HQ</span></div>
-  <p class="dulu c in">Dulu isteri tanya:</p>
-  <p class="lama c in">"Dah habis ke, bang?"</p>
-  <p class="kini c in">Lepas amalkan Soloco, isteri bisik:</p>
-  <h1 class="anton c in">"Bang... Rehat Kejap."</h1>
-  <p class="sub c">1 biji candy herba, 30 minit sebelum beraksi. Tak panas, tak rasa pening.</p>
-  <div class="foto"><img src="https://cdn.jsdelivr.net/gh/irwanpauzi/soloco-ladi@56c55dca8ee9fe38aebf9e992595ae8e2b9eab73/img/hero.webp" alt="Soloco Candy original dengan ginseng dan madu" width="840" height="1043"></div>
-  <div class="kelebihan">
-    <div class="k"><svg class="ik" viewBox="0 0 28 28"><circle cx="14" cy="14" r="14" fill="#C70209"/><path d="M8 14.5l4 4 8-9" stroke="#fff" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg><div class="tx">Bantu lebih keras &amp; tahan lama</div></div>
-    <div class="k"><svg class="ik" viewBox="0 0 28 28"><circle cx="14" cy="14" r="14" fill="#C70209"/><path d="M8 14.5l4 4 8-9" stroke="#fff" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg><div class="tx">Atasi masalah pancut awal</div></div>
-    <div class="k"><svg class="ik" viewBox="0 0 28 28"><circle cx="14" cy="14" r="14" fill="#C70209"/><path d="M8 14.5l4 4 8-9" stroke="#fff" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg><div class="tx">Nafsu kembali macam dulu</div></div>
-    <div class="k"><svg class="ik" viewBox="0 0 28 28"><circle cx="14" cy="14" r="14" fill="#C70209"/><path d="M8 14.5l4 4 8-9" stroke="#fff" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg><div class="tx">Sebiji boleh tahan 3 hingga 5 hari</div></div>
+  <div class="kad kad-hero" style="background-image:url(https://cdn.jsdelivr.net/gh/irwanpauzi/soloco-ladi@6a2fa5653e0a7e261523ab0f161b575d92fbc618/img/kad-hero.webp)">
+    <div class="c"><span class="kicker">18+ KHAS SUAMI ISTERI</span></div>
+    <p class="soal c">Dulu isteri tanya:</p>
+    <p class="lama c">"DAH HABIS KE, BANG?"</p>
+    <p class="kini c">Lepas sebiji Soloco, dia bisik:</p>
+    <h1 class="A c">"BANG... REHAT KEJAP."</h1>
   </div>
-  <div class="amanah">
-    <div class="a"><svg viewBox="0 0 30 30"><path d="M15 3l10 4v8c0 6-4 10-10 12C9 25 5 21 5 15V7z M10 15l4 4 7-8" stroke="#F2C14E" stroke-width="2.2" fill="none" stroke-linejoin="round" stroke-linecap="round"/></svg><div class="t">Original HQ</div></div>
-    <div class="a"><svg viewBox="0 0 30 30"><path d="M4 9h22v14H4z M4 14h22 M9 19h5" stroke="#F2C14E" stroke-width="2.2" fill="none" stroke-linejoin="round" stroke-linecap="round"/></svg><div class="t">COD, sampai baru bayar</div></div>
-    <div class="a"><svg viewBox="0 0 30 30"><path d="M5 10l10-5 10 5v11l-10 5-10-5z M5 10l10 5 10-5 M15 15v11" stroke="#F2C14E" stroke-width="2.2" fill="none" stroke-linejoin="round"/></svg><div class="t">Nama produk dirahsiakan</div></div>
+  <p class="sub c">Malam ni, biar <b>dia</b> yang minta rehat dulu. Sebiji candy herba, 30 minit sebelum masuk bilik.</p>
+  <div class="stat3">
+    <div class="s"><span class="n">1</span><div class="l">BIJI SAHAJA</div></div>
+    <div class="s"><span class="n">30</span><div class="l">MINIT SEBELUM</div></div>
+    <div class="s"><span class="n">3-5</span><div class="l">HARI TAHAN</div></div>
   </div>
+  <div class="tawar">
+    <div class="k">HARGA HARI INI, PAKEJ TERLARIS</div>
+    <div class="gbt"><img src="https://cdn.jsdelivr.net/gh/irwanpauzi/soloco-ladi@6a2fa5653e0a7e261523ab0f161b575d92fbc618/img/pakej-terlaris.webp" alt="1 tin Soloco Candy + free MagicTisu" width="650" height="469"></div>
+    <div class="asal">RM200</div>
+    <div class="hrg">RM99</div>
+    <div class="plus">+ FREE GIFT</div>
+    <p class="terhad kelip">*Terhad kepada 50 pembeli terawal</p>
+  </div>
+  <div class="btn-wrap"><a class="btn nadi" href="#pakej" role="button">NAK YANG ORIGINAL!</a></div>
+  <p class="bawah-btn">Barang sampai baru bayar. Pos ke ofis pun tak kantoi.</p>
 </section>
 
 <!-- 2 MASALAH -->
 <section id="masalah">
   <div class="in">
-    <h2 class="anton c">Abang Bukan Seorang. <span class="merah">Ramai Suami Senyap Tanggung Ni.</span></h2>
-    <div class="soal">
-      <div class="baris"><svg class="ik" viewBox="0 0 28 28"><circle cx="14" cy="14" r="14" fill="#C70209"/><path d="M9 9l10 10M19 9L9 19" stroke="#fff" stroke-width="3" stroke-linecap="round"/></svg><div class="tx">Kekerasan tak mencukupi</div></div>
-      <div class="baris"><svg class="ik" viewBox="0 0 28 28"><circle cx="14" cy="14" r="14" fill="#C70209"/><path d="M9 9l10 10M19 9L9 19" stroke="#fff" stroke-width="3" stroke-linecap="round"/></svg><div class="tx">Pancut awal</div></div>
-      <div class="baris"><svg class="ik" viewBox="0 0 28 28"><circle cx="14" cy="14" r="14" fill="#C70209"/><path d="M9 9l10 10M19 9L9 19" stroke="#fff" stroke-width="3" stroke-linecap="round"/></svg><div class="tx">Nafsu makin menurun</div></div>
-      <div class="baris"><svg class="ik" viewBox="0 0 28 28"><circle cx="14" cy="14" r="14" fill="#C70209"/><path d="M9 9l10 10M19 9L9 19" stroke="#fff" stroke-width="3" stroke-linecap="round"/></svg><div class="tx">Saiz zakar kecil</div></div>
+    <div class="c"><span class="kicker">JUJUR, BANG...</span></div>
+    <h2 class="A c tajuk">ABANG ALAMI <span class="merah">SALAH SATU NI?</span></h2>
+    <div class="senarai">
+      <div class="baris"><svg class="ik" viewBox="0 0 28 28"><circle cx="14" cy="14" r="14" fill="#FF2D2D"/><path d="M9 9l10 10M19 9L9 19" stroke="#fff" stroke-width="3" stroke-linecap="round"/></svg><div class="tx">Kekerasan tak mencukupi</div></div>
+      <div class="baris"><svg class="ik" viewBox="0 0 28 28"><circle cx="14" cy="14" r="14" fill="#FF2D2D"/><path d="M9 9l10 10M19 9L9 19" stroke="#fff" stroke-width="3" stroke-linecap="round"/></svg><div class="tx">Pancut awal</div></div>
+      <div class="baris"><svg class="ik" viewBox="0 0 28 28"><circle cx="14" cy="14" r="14" fill="#FF2D2D"/><path d="M9 9l10 10M19 9L9 19" stroke="#fff" stroke-width="3" stroke-linecap="round"/></svg><div class="tx">Nafsu makin menurun</div></div>
+      <div class="baris"><svg class="ik" viewBox="0 0 28 28"><circle cx="14" cy="14" r="14" fill="#FF2D2D"/><path d="M9 9l10 10M19 9L9 19" stroke="#fff" stroke-width="3" stroke-linecap="round"/></svg><div class="tx">Saiz zakar kecil</div></div>
     </div>
-    <p>Ramai suami yang hadapi masalah ni sampai rasa malu dengan orang rumah bila nak bersama. Tergugat bang kita sebagai orang lelaki.</p>
-  </div>
-  <div class="foto"><img src="https://cdn.jsdelivr.net/gh/irwanpauzi/soloco-ladi@56c55dca8ee9fe38aebf9e992595ae8e2b9eab73/img/babak-malu.webp" alt="Suami duduk di birai katil, malu dengan isteri" width="840" height="1043"></div>
-  <div class="in bawah">
-    <h3 class="anton c">90% Suami Gagal Puaskan Isteri <span class="emas">Kerana...</span></h3>
+    <div class="kad kad-malu" style="background-image:url(https://cdn.jsdelivr.net/gh/irwanpauzi/soloco-ladi@6a2fa5653e0a7e261523ab0f161b575d92fbc618/img/kad-malu.webp)">
+      <div class="t">"TERGUGAT BANG KITA SEBAGAI ORANG LELAKI."</div>
+      <p class="s">Sampai malu dengan orang rumah bila nak bersama.</p>
+    </div>
+    <h3 class="A c sub2">90% SUAMI GAGAL PUASKAN ISTERI <span class="emas">KERANA...</span></h3>
     <div class="grid2">
-      <div class="kad-punca"><img src="https://cdn.jsdelivr.net/gh/irwanpauzi/soloco-ladi@56c55dca8ee9fe38aebf9e992595ae8e2b9eab73/img/punca-ais.webp" alt="Minum ais" width="480" height="336"><div class="lb">Minum Ais</div></div>
-      <div class="kad-punca"><img src="https://cdn.jsdelivr.net/gh/irwanpauzi/soloco-ladi@56c55dca8ee9fe38aebf9e992595ae8e2b9eab73/img/punca-onani.webp" alt="Kerap onani" width="480" height="336"><div class="lb">Kerap Onani</div></div>
-      <div class="kad-punca"><img src="https://cdn.jsdelivr.net/gh/irwanpauzi/soloco-ladi@56c55dca8ee9fe38aebf9e992595ae8e2b9eab73/img/punca-senaman.webp" alt="Tak bersenam" width="480" height="336"><div class="lb">Tak Bersenam</div></div>
-      <div class="kad-punca"><img src="https://cdn.jsdelivr.net/gh/irwanpauzi/soloco-ladi@56c55dca8ee9fe38aebf9e992595ae8e2b9eab73/img/punca-makan.webp" alt="Tak jaga makan" width="480" height="336"><div class="lb">Tak Jaga Makan</div></div>
+      <div class="kad kp" style="background-image:url(https://cdn.jsdelivr.net/gh/irwanpauzi/soloco-ladi@6a2fa5653e0a7e261523ab0f161b575d92fbc618/img/kp-ais.webp)"><div><span class="no">1</span></div><div class="t">MINUM AIS</div></div>
+      <div class="kad kp" style="background-image:url(https://cdn.jsdelivr.net/gh/irwanpauzi/soloco-ladi@6a2fa5653e0a7e261523ab0f161b575d92fbc618/img/kp-onani.webp)"><div><span class="no">2</span></div><div class="t">KERAP ONANI</div></div>
+      <div class="kad kp" style="background-image:url(https://cdn.jsdelivr.net/gh/irwanpauzi/soloco-ladi@6a2fa5653e0a7e261523ab0f161b575d92fbc618/img/kp-senaman.webp)"><div><span class="no">3</span></div><div class="t">TAK BERSENAM</div></div>
+      <div class="kad kp" style="background-image:url(https://cdn.jsdelivr.net/gh/irwanpauzi/soloco-ladi@6a2fa5653e0a7e261523ab0f161b575d92fbc618/img/kp-makan.webp)"><div><span class="no">4</span></div><div class="t">TAK JAGA MAKAN</div></div>
     </div>
   </div>
 </section>
@@ -225,57 +267,71 @@ details p{font-size:18px;color:#333;margin:8px 0 0}
 <!-- 3 CARA LAMA -->
 <section id="caralama">
   <div class="in">
-    <h2 class="anton c">Kenapa Cara Lama <span class="merah">Tak Menjadi?</span></h2>
-    <div class="kad-x"><svg class="ik" viewBox="0 0 32 32"><circle cx="16" cy="16" r="16" fill="#C70209"/><path d="M11 11l10 10M21 11L11 21" stroke="#fff" stroke-width="3" stroke-linecap="round"/></svg><div><div class="t">Pil Kuat Tepi Jalan</div><p class="s">Pil tanpa label. Abang tak tahu apa yang masuk ke badan.</p></div></div>
-    <div class="kad-x"><svg class="ik" viewBox="0 0 32 32"><circle cx="16" cy="16" r="16" fill="#C70209"/><path d="M11 11l10 10M21 11L11 21" stroke="#fff" stroke-width="3" stroke-linecap="round"/></svg><div><div class="t">Krim Kebas</div><p class="s">Memang lambat pancut, tapi abang sendiri pun tak rasa apa.</p></div></div>
-    <div class="kad-x"><svg class="ik" viewBox="0 0 32 32"><circle cx="16" cy="16" r="16" fill="#C70209"/><path d="M11 11l10 10M21 11L11 21" stroke="#fff" stroke-width="3" stroke-linecap="round"/></svg><div><div class="t">Tunggu "Okey Sendiri"</div><p class="s">Makin lama dibiar, makin hilang yakin depan isteri.</p></div></div>
-    <div class="kad-ok"><svg class="ik" viewBox="0 0 32 32"><circle cx="16" cy="16" r="16" fill="#25A55F"/><path d="M9 16.5l5 5 9-10" stroke="#fff" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg><div><div class="t">Soloco Candy</div><p class="s">Candy herba berperisa coklat. Kunyah sebiji 30 minit sebelum beraksi. Tak panas, tak rasa pening.</p></div></div>
+    <h2 class="A c tajuk">DAH CUBA SEMUA, <span class="merah">TAPI TAK JADI?</span></h2>
+    <div class="kx"><svg class="ik" viewBox="0 0 34 34"><circle cx="17" cy="17" r="17" fill="#FF2D2D"/><path d="M12 12l10 10M22 12L12 22" stroke="#fff" stroke-width="3" stroke-linecap="round"/></svg><div><div class="t">PIL KUAT TEPI JALAN</div><p class="s">Pil tanpa label. Abang tak tahu apa yang masuk ke badan.</p><span class="tag">TAK SELESAI</span></div></div>
+    <div class="kx"><svg class="ik" viewBox="0 0 34 34"><circle cx="17" cy="17" r="17" fill="#FF2D2D"/><path d="M12 12l10 10M22 12L12 22" stroke="#fff" stroke-width="3" stroke-linecap="round"/></svg><div><div class="t">KRIM KEBAS</div><p class="s">Memang lambat pancut, tapi abang sendiri pun tak rasa apa.</p><span class="tag">TAK SELESAI</span></div></div>
+    <div class="kx"><svg class="ik" viewBox="0 0 34 34"><circle cx="17" cy="17" r="17" fill="#FF2D2D"/><path d="M12 12l10 10M22 12L12 22" stroke="#fff" stroke-width="3" stroke-linecap="round"/></svg><div><div class="t">TUNGGU "OKEY SENDIRI"</div><p class="s">Makin lama dibiar, makin hilang yakin depan isteri.</p><span class="tag">MAKIN TERUK</span></div></div>
+    <div class="kok">
+      <img src="https://cdn.jsdelivr.net/gh/irwanpauzi/soloco-ladi@6a2fa5653e0a7e261523ab0f161b575d92fbc618/img/hero.webp" alt="Soloco Candy original" width="840" height="1043">
+      <div class="t">SOLOCO: SEBIJI CANDY, SETTEL.</div>
+      <p class="s">Candy herba berperisa coklat. Kunyah 30 minit sebelum beraksi. Tak panas, tak rasa pening.</p>
+    </div>
   </div>
 </section>
 
 <!-- 4 ORIGINAL -->
 <section id="original">
   <div class="in">
-    <div class="c"><span class="pita pita-emas">PASTIKAN ORIGINAL</span></div>
-    <h2 class="anton c">Yang <span class="emas">Original</span>, Terus Dari HQ</h2>
-    <div class="foto"><img src="https://cdn.jsdelivr.net/gh/irwanpauzi/soloco-ladi@56c55dca8ee9fe38aebf9e992595ae8e2b9eab73/img/pedestal.webp" alt="Tin dan candy Soloco original" width="840" height="1043"></div>
-    <h3 class="anton c">Kenali Soloco Yang Original</h3>
-    <div class="baris"><svg class="ik" viewBox="0 0 28 28"><circle cx="14" cy="14" r="14" fill="#D4A93A"/><path d="M8 14.5l4 4 8-9" stroke="#0B0B0B" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg><div class="tx">Tin emas panjang bertulis SOLOCO</div></div>
-    <div class="baris"><svg class="ik" viewBox="0 0 28 28"><circle cx="14" cy="14" r="14" fill="#D4A93A"/><path d="M8 14.5l4 4 8-9" stroke="#0B0B0B" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg><div class="tx">Sachet coklat gelap berjalur emas</div></div>
-    <div class="baris"><svg class="ik" viewBox="0 0 28 28"><circle cx="14" cy="14" r="14" fill="#D4A93A"/><path d="M8 14.5l4 4 8-9" stroke="#0B0B0B" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg><div class="tx">Candy kecil berbentuk segi tiga</div></div>
-    <div class="awas">
-      <div class="t">ELAK TIRUAN</div>
-      <p class="s">Beli hanya di website rasmi ini. HQ tak dapat jamin keaslian Soloco yang dibeli di luar website ini.</p>
+    <div class="c"><span class="kicker kicker-emas">PASTIKAN ORIGINAL</span></div>
+    <h2 class="A c tajuk">YANG <span class="emas">ORIGINAL</span> HANYA DI SINI</h2>
+    <div class="kad kad-ori" style="background-image:url(https://cdn.jsdelivr.net/gh/irwanpauzi/soloco-ladi@6a2fa5653e0a7e261523ab0f161b575d92fbc618/img/kad-ori.webp)">
+      <div class="t">SOLOCO CANDY <span class="emas">ORIGINAL HQ</span></div>
+      <p class="s">Terus dari HQ ke pintu rumah abang.</p>
+    </div>
+    <div class="ciri">
+      <div class="baris"><svg class="ik" viewBox="0 0 28 28"><circle cx="14" cy="14" r="14" fill="#FFC93C"/><path d="M8 14.5l4 4 8-9" stroke="#120405" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg><div class="tx">Tin emas panjang bertulis SOLOCO</div></div>
+      <div class="baris"><svg class="ik" viewBox="0 0 28 28"><circle cx="14" cy="14" r="14" fill="#FFC93C"/><path d="M8 14.5l4 4 8-9" stroke="#120405" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg><div class="tx">Sachet coklat gelap berjalur emas</div></div>
+      <div class="baris"><svg class="ik" viewBox="0 0 28 28"><circle cx="14" cy="14" r="14" fill="#FFC93C"/><path d="M8 14.5l4 4 8-9" stroke="#120405" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg><div class="tx">Candy kecil berbentuk segi tiga</div></div>
+    </div>
+    <div class="awas kelip">
+      <div class="t">AWAS! ELAK TIRUAN</div>
+      <p class="s">HQ tak jamin keaslian Soloco yang dibeli di luar website ini.</p>
     </div>
   </div>
 </section>
 
-<!-- 5 BAHAN -->
-<section id="bahan">
+<!-- 5 FAEDAH -->
+<section id="faedah">
   <div class="in">
-    <h2 class="anton c">Apa Ada Dalam Sebiji Soloco</h2>
-    <div class="foto"><img src="https://cdn.jsdelivr.net/gh/irwanpauzi/soloco-ladi@56c55dca8ee9fe38aebf9e992595ae8e2b9eab73/img/bahan.webp" alt="Bahan herba dalam Soloco Candy" width="840" height="840"></div>
-    <div class="chip">
-      <div class="b">Tunjuk Langit</div><div class="b">Ginseng</div><div class="b">Aweto</div><div class="b">Damiana</div><div class="b">Coklat Gelap</div><div class="b">Acai Berry</div><div class="b">Madu</div>
+    <div class="c"><span class="kicker">DALAM BILIK, MALAM TU...</span></div>
+    <h2 class="A c tajuk">ABANG YANG KAWAL, <span class="emas">DIA YANG MERAYU</span></h2>
+    <div class="bento">
+      <div class="kad kf" style="background-image:url(https://cdn.jsdelivr.net/gh/irwanpauzi/soloco-ladi@6a2fa5653e0a7e261523ab0f161b575d92fbc618/img/kf-1.webp)"><div class="t">TAHAN LEBIH LAMA</div><p class="s">Dia sampai dulu</p></div>
+      <div class="kad kf" style="background-image:url(https://cdn.jsdelivr.net/gh/irwanpauzi/soloco-ladi@6a2fa5653e0a7e261523ab0f161b575d92fbc618/img/kf-2.webp)"><div class="t">KERAS SAMPAI HABIS</div><p class="s">Tak kendur separuh jalan</p></div>
+      <div class="kad kf" style="background-image:url(https://cdn.jsdelivr.net/gh/irwanpauzi/soloco-ladi@6a2fa5653e0a7e261523ab0f161b575d92fbc618/img/kf-3.webp)"><div class="t">PAGI ESOK, DIA SENYUM</div><p class="s">Abang bangun segar</p></div>
+      <div class="kad kf" style="background-image:url(https://cdn.jsdelivr.net/gh/irwanpauzi/soloco-ladi@6a2fa5653e0a7e261523ab0f161b575d92fbc618/img/kf-4.webp)"><div class="t">NAFSU MEMBARA</div><p class="s">Dia pula yang ajak</p></div>
     </div>
-    <div class="bukti-usm">
-      <div class="t">Diuji Makmal Toksikologi USM (Pusat Racun Negara)</div>
-      <div class="s">Sijil analisis: tiada logam berat dikesan.</div>
-      <img src="https://cdn.jsdelivr.net/gh/irwanpauzi/soloco-ladi@56c55dca8ee9fe38aebf9e992595ae8e2b9eab73/img/sijil-usm.webp" alt="Sijil analisis Makmal Toksikologi USM untuk Soloco" width="760" height="571">
+    <div class="besar">
+      <span class="n">4 ROUND</span>
+      <div class="l">SEBELUM NI, 2 ROUND PUN SUSAH</div>
+      <p class="q">"mlm smalam slambe 4 round... sblm2 ni nak 2 round pun susah"</p>
+      <p class="o">PELANGGAN SOLOCO, WHATSAPP</p>
     </div>
   </div>
+  <div class="btn-wrap"><a class="btn nadi" href="#pakej" role="button">SAYA NAK RASA JUGA!</a></div>
 </section>
 
-<!-- 6 BEZA -->
-<section id="beza">
+<!-- 6 MASA -->
+<section id="masa">
   <div class="in">
-    <h2 class="anton c">Apa Yang Pelanggan Rasa Lepas Sebiji</h2>
-    <div class="masa"><div class="w">30 MINIT</div><div><p class="q">"Lebih kurang 30minit dah ada kesan. Tak rasa pening."</p><p class="o">Pelanggan, WhatsApp</p></div></div>
-    <div class="masa"><div class="w">MALAM TU</div><div><p class="q">"mlm smalam slambe 4 round... sblm2 ni nak 2 round pun susah"</p><p class="o">Pelanggan, WhatsApp</p></div></div>
-    <div class="masa"><div class="w">ESOK PAGI</div><div><p class="q">"dapat menyegarkan badan bila bangun pagi"</p><p class="o">Pelanggan, WhatsApp</p></div></div>
-    <div class="masa"><div class="w">3-5 HARI</div><div><p class="q">"1 biji tahan 5hari"</p><p class="o">Pelanggan, WhatsApp</p></div></div>
-    <div class="foto"><img src="https://cdn.jsdelivr.net/gh/irwanpauzi/soloco-ladi@56c55dca8ee9fe38aebf9e992595ae8e2b9eab73/img/babak-dapur.webp" alt="Suami isteri mesra di dapur pada waktu pagi" width="840" height="1043"></div>
-    <h3 class="anton c">Cara Guna, 3 Langkah</h3>
+    <h2 class="A c tajuk">LEPAS SEBIJI, <span class="emas">MALAM JADI PANJANG</span></h2>
+    <div class="tl">
+      <div class="m"><div class="w">30 MINIT</div><p class="q">"Lebih kurang 30minit dah ada kesan. Tak rasa pening."</p><p class="o">Pelanggan, WhatsApp</p></div>
+      <div class="m"><div class="w">MALAM TU</div><p class="q">"memang padu dan tahan lama mcm muda2 dulu"</p><p class="o">Pelanggan, WhatsApp</p></div>
+      <div class="m"><div class="w">ESOK PAGI</div><p class="q">"dapat menyegarkan badan bila bangun pagi"</p><p class="o">Pelanggan, WhatsApp</p></div>
+      <div class="m"><div class="w">5 HARI</div><p class="q">"1 biji tahan 5hari"</p><p class="o">Pelanggan, WhatsApp</p></div>
+    </div>
+    <h3 class="A c" style="font-size:32px;margin:10px 0 0">SEMUDAH 3 LANGKAH</h3>
     <div class="langkah">
       <div class="l"><span class="n">1</span><div class="t">Koyak sachet</div></div>
       <div class="l"><span class="n">2</span><div class="t">Kunyah 1 biji</div></div>
@@ -284,113 +340,130 @@ details p{font-size:18px;color:#333;margin:8px 0 0}
   </div>
 </section>
 
-<!-- 7 BUKTI -->
+<!-- 7 BAHAN -->
+<section id="bahan">
+  <div class="in">
+    <h2 class="A c tajuk">HERBA KAMPUNG <span class="merah">DALAM SEBIJI</span></h2>
+    <div class="foto"><img src="https://cdn.jsdelivr.net/gh/irwanpauzi/soloco-ladi@6a2fa5653e0a7e261523ab0f161b575d92fbc618/img/bahan.webp" alt="Bahan herba dalam Soloco Candy" width="840" height="840"></div>
+    <div class="chip">
+      <div class="b">Tunjuk Langit</div><div class="b">Ginseng</div><div class="b">Aweto</div><div class="b">Damiana</div><div class="b">Coklat Gelap</div><div class="b">Acai Berry</div><div class="b">Madu</div>
+    </div>
+    <div class="usm">
+      <div class="t">DIUJI MAKMAL TOKSIKOLOGI USM</div>
+      <div class="s">Pusat Racun Negara. Sijil analisis: tiada logam berat dikesan.</div>
+      <img src="https://cdn.jsdelivr.net/gh/irwanpauzi/soloco-ladi@6a2fa5653e0a7e261523ab0f161b575d92fbc618/img/sijil-usm.webp" alt="Sijil analisis Makmal Toksikologi USM untuk Soloco" width="760" height="571">
+    </div>
+  </div>
+</section>
+
+<!-- 8 BUKTI -->
 <section id="bukti">
   <div class="in">
-    <h2 class="anton c">Padu <span class="merah">BETUL</span> Feedback Mereka</h2>
-    <div class="wa"><img src="https://cdn.jsdelivr.net/gh/irwanpauzi/soloco-ladi@56c55dca8ee9fe38aebf9e992595ae8e2b9eab73/img/wa-image124.webp" alt="Testimoni WhatsApp pelanggan Soloco" width="607" height="450"></div>
-    <div class="wa"><img src="https://cdn.jsdelivr.net/gh/irwanpauzi/soloco-ladi@56c55dca8ee9fe38aebf9e992595ae8e2b9eab73/img/wa-image104.webp" alt="Testimoni WhatsApp pelanggan Soloco" width="607" height="337"></div>
-    <div class="wa"><img src="https://cdn.jsdelivr.net/gh/irwanpauzi/soloco-ladi@56c55dca8ee9fe38aebf9e992595ae8e2b9eab73/img/wa-image127.webp" alt="Testimoni WhatsApp pelanggan Soloco" width="607" height="432"></div>
-    <div class="wa"><img src="https://cdn.jsdelivr.net/gh/irwanpauzi/soloco-ladi@56c55dca8ee9fe38aebf9e992595ae8e2b9eab73/img/wa-image106.webp" alt="Testimoni WhatsApp pelanggan Soloco" width="607" height="550"></div>
+    <h2 class="A c tajuk">PADU <span class="merah">BETUL</span> FEEDBACK MEREKA</h2>
+    <div class="cap">DARI 2 ROUND PUN SUSAH, JADI 4 ROUND!</div>
+    <div class="wa wa-cap"><img src="https://cdn.jsdelivr.net/gh/irwanpauzi/soloco-ladi@6a2fa5653e0a7e261523ab0f161b575d92fbc618/img/wa-image124.webp" alt="Testimoni WhatsApp pelanggan Soloco" width="607" height="450"></div>
+    <div class="cap">1 JAM BERTARUNG, MASIH KERAS!</div>
+    <div class="wa wa-cap"><img src="https://cdn.jsdelivr.net/gh/irwanpauzi/soloco-ladi@6a2fa5653e0a7e261523ab0f161b575d92fbc618/img/wa-image104.webp" alt="Testimoni WhatsApp pelanggan Soloco" width="607" height="337"></div>
+    <div class="cap">DAH PANCUT, BATANG MASIH KERAS</div>
+    <div class="wa wa-cap"><img src="https://cdn.jsdelivr.net/gh/irwanpauzi/soloco-ladi@6a2fa5653e0a7e261523ab0f161b575d92fbc618/img/wa-image127.webp" alt="Testimoni WhatsApp pelanggan Soloco" width="607" height="432"></div>
+    <div class="cap">30 MINIT ADA KESAN, TAHAN 5 HARI</div>
+    <div class="wa wa-cap"><img src="https://cdn.jsdelivr.net/gh/irwanpauzi/soloco-ladi@6a2fa5653e0a7e261523ab0f161b575d92fbc618/img/wa-image106.webp" alt="Testimoni WhatsApp pelanggan Soloco" width="607" height="550"></div>
     <p class="swipe">Swipe untuk lagi testimoni customer.</p>
   </div>
   <div class="tr-wrap" aria-roledescription="carousel">
     <div class="tr" id="tr-testi">
-      <div class="sl" aria-roledescription="slide"><img src="https://cdn.jsdelivr.net/gh/irwanpauzi/soloco-ladi@56c55dca8ee9fe38aebf9e992595ae8e2b9eab73/img/wa-testi-a.webp" alt="Testimoni WhatsApp pelanggan Soloco" width="607" height="760"></div>
-      <div class="sl" aria-roledescription="slide"><img src="https://cdn.jsdelivr.net/gh/irwanpauzi/soloco-ladi@56c55dca8ee9fe38aebf9e992595ae8e2b9eab73/img/wa-image121.webp" alt="Testimoni WhatsApp pelanggan Soloco" width="607" height="760"></div>
-      <div class="sl" aria-roledescription="slide"><img src="https://cdn.jsdelivr.net/gh/irwanpauzi/soloco-ladi@56c55dca8ee9fe38aebf9e992595ae8e2b9eab73/img/wa-image126.webp" alt="Testimoni WhatsApp pelanggan Soloco" width="607" height="760"></div>
-      <div class="sl" aria-roledescription="slide"><img src="https://cdn.jsdelivr.net/gh/irwanpauzi/soloco-ladi@56c55dca8ee9fe38aebf9e992595ae8e2b9eab73/img/wa-testi-b.webp" alt="Testimoni WhatsApp pelanggan Soloco" width="607" height="760"></div>
-      <div class="sl" aria-roledescription="slide"><img src="https://cdn.jsdelivr.net/gh/irwanpauzi/soloco-ladi@56c55dca8ee9fe38aebf9e992595ae8e2b9eab73/img/wa-image123.webp" alt="Testimoni WhatsApp pelanggan Soloco" width="607" height="760"></div>
-      <div class="sl" aria-roledescription="slide"><img src="https://cdn.jsdelivr.net/gh/irwanpauzi/soloco-ladi@56c55dca8ee9fe38aebf9e992595ae8e2b9eab73/img/wa-image111.webp" alt="Testimoni WhatsApp pelanggan Soloco" width="607" height="760"></div>
-      <div class="sl" aria-roledescription="slide"><img src="https://cdn.jsdelivr.net/gh/irwanpauzi/soloco-ladi@56c55dca8ee9fe38aebf9e992595ae8e2b9eab73/img/wa-image110.webp" alt="Testimoni WhatsApp pelanggan Soloco" width="607" height="760"></div>
-      <div class="sl" aria-roledescription="slide"><img src="https://cdn.jsdelivr.net/gh/irwanpauzi/soloco-ladi@56c55dca8ee9fe38aebf9e992595ae8e2b9eab73/img/wa-image125.webp" alt="Testimoni WhatsApp pelanggan Soloco" width="607" height="760"></div>
+      <div class="sl" aria-roledescription="slide"><div class="cap-sl">TEGAK PANTANG KENA SENTUH</div><img src="https://cdn.jsdelivr.net/gh/irwanpauzi/soloco-ladi@6a2fa5653e0a7e261523ab0f161b575d92fbc618/img/wa-testi-a.webp" alt="Testimoni WhatsApp pelanggan Soloco" width="607" height="760"></div>
+      <div class="sl" aria-roledescription="slide"><div class="cap-sl">ISTERI TERSENYUM JE</div><img src="https://cdn.jsdelivr.net/gh/irwanpauzi/soloco-ladi@6a2fa5653e0a7e261523ab0f161b575d92fbc618/img/wa-image121.webp" alt="Testimoni WhatsApp pelanggan Soloco" width="607" height="760"></div>
+      <div class="sl" aria-roledescription="slide"><div class="cap-sl">KENA 3 ROUND!</div><img src="https://cdn.jsdelivr.net/gh/irwanpauzi/soloco-ladi@6a2fa5653e0a7e261523ab0f161b575d92fbc618/img/wa-image126.webp" alt="Testimoni WhatsApp pelanggan Soloco" width="607" height="760"></div>
+      <div class="sl" aria-roledescription="slide"><div class="cap-sl">3 JAM BERKESAN, TAK PENING</div><img src="https://cdn.jsdelivr.net/gh/irwanpauzi/soloco-ladi@6a2fa5653e0a7e261523ab0f161b575d92fbc618/img/wa-testi-b.webp" alt="Testimoni WhatsApp pelanggan Soloco" width="607" height="760"></div>
+      <div class="sl" aria-roledescription="slide"><div class="cap-sl">DIA TAHAN 6 HARI</div><img src="https://cdn.jsdelivr.net/gh/irwanpauzi/soloco-ladi@6a2fa5653e0a7e261523ab0f161b575d92fbc618/img/wa-image123.webp" alt="Testimoni WhatsApp pelanggan Soloco" width="607" height="760"></div>
+      <div class="sl" aria-roledescription="slide"><div class="cap-sl">1 JAM, TERASA NAK TEGANG</div><img src="https://cdn.jsdelivr.net/gh/irwanpauzi/soloco-ladi@6a2fa5653e0a7e261523ab0f161b575d92fbc618/img/wa-image111.webp" alt="Testimoni WhatsApp pelanggan Soloco" width="607" height="760"></div>
+      <div class="sl" aria-roledescription="slide"><div class="cap-sl">KESAN CEPAT, LAIN MACAM POWER</div><img src="https://cdn.jsdelivr.net/gh/irwanpauzi/soloco-ladi@6a2fa5653e0a7e261523ab0f161b575d92fbc618/img/wa-image110.webp" alt="Testimoni WhatsApp pelanggan Soloco" width="607" height="760"></div>
+      <div class="sl" aria-roledescription="slide"><div class="cap-sl">TAK PENING, MALAH BERTENAGA</div><img src="https://cdn.jsdelivr.net/gh/irwanpauzi/soloco-ladi@6a2fa5653e0a7e261523ab0f161b575d92fbc618/img/wa-image125.webp" alt="Testimoni WhatsApp pelanggan Soloco" width="607" height="760"></div>
     </div>
   </div>
   <div class="nav-tr">
     <button type="button" aria-controls="tr-testi" data-slide="prev">Sebelum</button>
     <button type="button" aria-controls="tr-testi" data-slide="next">Seterusnya</button>
   </div>
-  <a class="btn-tempah lihat nadi" href="#pakej" role="button">LIHAT PAKEJ &amp; HARGA</a>
+  <div class="btn-wrap"><a class="btn nadi" href="#pakej" role="button">GILIRAN ABANG PULA!</a></div>
+  <p class="bawah-btn">Barang sampai baru bayar.</p>
 </section>
 
-<!-- 8 PAKEJ -->
+<!-- 9 PAKEJ -->
 <section id="pakej">
   <div class="in">
-    <div class="c"><span class="pita nadi">PERMINTAAN SANGAT TINGGI</span></div>
-    <h2 class="anton c">Pilih Pakej, <span class="merah">Free Gift Untuk Pembelian Hari Ini</span></h2>
-    <p class="peringatan">Tawaran ini diberikan pada hari ini dan di website ini sahaja, dan akan DITUTUP tidak lama lagi.</p>
+    <div class="c"><span class="kicker nadi">PERMINTAAN SANGAT TINGGI</span></div>
+    <h2 class="A c tajuk">PILIH PAKEJ, <span class="emas">AMBIL FREE GIFT</span></h2>
 
     <div class="pk pk-top">
       <div class="c"><span class="lbl">PALING RAMAI PILIH</span></div>
-      <div class="nm c">Pakej Terlaris</div>
+      <div class="nm c">PAKEJ TERLARIS</div>
       <div class="tp c">1 Tin (12 biji) · kegunaan 20-30 hari</div>
-      <div class="gb"><img src="https://cdn.jsdelivr.net/gh/irwanpauzi/soloco-ladi@56c55dca8ee9fe38aebf9e992595ae8e2b9eab73/img/pakej-terlaris.webp" alt="1 tin Soloco Candy + free MagicTisu" width="650" height="469"></div>
-      <div class="asal">Harga asal RM200</div>
+      <div class="gb"><img src="https://cdn.jsdelivr.net/gh/irwanpauzi/soloco-ladi@6a2fa5653e0a7e261523ab0f161b575d92fbc618/img/pakej-terlaris.webp" alt="1 tin Soloco Candy + free MagicTisu" width="650" height="469"></div>
+      <div class="asal">RM200</div>
       <div class="hrg">RM99</div>
       <span class="jimat">JIMAT RM101</span>
       <div class="sb">Cuma RM8.25 sebiji</div>
       <div class="ls">
         <div class="baris"><svg class="ik" viewBox="0 0 28 28"><circle cx="14" cy="14" r="14" fill="#25A55F"/><path d="M8 14.5l4 4 8-9" stroke="#fff" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg><div class="tx">1 Tin Soloco Candy (12 biji)</div></div>
-        <div class="baris"><svg class="ik" viewBox="0 0 28 28"><circle cx="14" cy="14" r="14" fill="#25A55F"/><path d="M8 14.5l4 4 8-9" stroke="#fff" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg><div class="tx">Free 1 kotak MagicTisu</div></div>
-        <div class="baris"><svg class="ik" viewBox="0 0 28 28"><circle cx="14" cy="14" r="14" fill="#25A55F"/><path d="M8 14.5l4 4 8-9" stroke="#fff" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg><div class="tx">Penghantaran percuma</div></div>
+        <div class="baris"><svg class="ik" viewBox="0 0 28 28"><circle cx="14" cy="14" r="14" fill="#25A55F"/><path d="M8 14.5l4 4 8-9" stroke="#fff" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg><div class="tx">FREE 1 kotak MagicTisu</div></div>
+        <div class="baris"><svg class="ik" viewBox="0 0 28 28"><circle cx="14" cy="14" r="14" fill="#25A55F"/><path d="M8 14.5l4 4 8-9" stroke="#fff" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg><div class="tx">FREE penghantaran</div></div>
       </div>
-      <a class="btn-tempah nadi" href="#borang" role="button">TEMPAH SEKARANG</a>
+      <a class="btn btn-emas nadi" href="#borang" role="button">YA, SAYA NAK!</a>
     </div>
 
     <div class="pk">
       <div class="c"><span class="lbl">PALING JIMAT</span></div>
-      <div class="nm c">Pakej Terjimat</div>
+      <div class="nm c">PAKEJ TERJIMAT</div>
       <div class="tp c">2 Tin (24 biji) · kegunaan 30-45 hari</div>
-      <div class="gb"><img src="https://cdn.jsdelivr.net/gh/irwanpauzi/soloco-ladi@56c55dca8ee9fe38aebf9e992595ae8e2b9eab73/img/pakej-terjimat.webp" alt="2 tin Soloco Candy + free MagicTisu + kondom berduri" width="888" height="564"></div>
-      <div class="asal">Harga asal RM400</div>
-      <div class="hrg">RM180</div>
-      <span class="jimat">JIMAT RM220</span>
-      <div class="sb">Cuma RM7.50 sebiji</div>
+      <div class="gb"><img src="https://cdn.jsdelivr.net/gh/irwanpauzi/soloco-ladi@6a2fa5653e0a7e261523ab0f161b575d92fbc618/img/pakej-terjimat.webp" alt="2 tin Soloco Candy + free MagicTisu + kondom berduri" width="888" height="564"></div>
+      <div class="asal">RM400</div>
+      <div class="hrg">RM170</div>
+      <span class="jimat">JIMAT RM230</span>
+      <div class="sb">Cuma RM7.08 sebiji</div>
       <div class="ls">
         <div class="baris"><svg class="ik" viewBox="0 0 28 28"><circle cx="14" cy="14" r="14" fill="#25A55F"/><path d="M8 14.5l4 4 8-9" stroke="#fff" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg><div class="tx">2 Tin Soloco Candy (24 biji)</div></div>
-        <div class="baris"><svg class="ik" viewBox="0 0 28 28"><circle cx="14" cy="14" r="14" fill="#25A55F"/><path d="M8 14.5l4 4 8-9" stroke="#fff" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg><div class="tx">Free 1 kotak MagicTisu</div></div>
-        <div class="baris"><svg class="ik" viewBox="0 0 28 28"><circle cx="14" cy="14" r="14" fill="#25A55F"/><path d="M8 14.5l4 4 8-9" stroke="#fff" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg><div class="tx">Free 1 kondom berduri</div></div>
-        <div class="baris"><svg class="ik" viewBox="0 0 28 28"><circle cx="14" cy="14" r="14" fill="#25A55F"/><path d="M8 14.5l4 4 8-9" stroke="#fff" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg><div class="tx">Penghantaran percuma</div></div>
+        <div class="baris"><svg class="ik" viewBox="0 0 28 28"><circle cx="14" cy="14" r="14" fill="#25A55F"/><path d="M8 14.5l4 4 8-9" stroke="#fff" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg><div class="tx">FREE 1 kotak MagicTisu</div></div>
+        <div class="baris"><svg class="ik" viewBox="0 0 28 28"><circle cx="14" cy="14" r="14" fill="#25A55F"/><path d="M8 14.5l4 4 8-9" stroke="#fff" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg><div class="tx">FREE 1 kondom berduri</div></div>
+        <div class="baris"><svg class="ik" viewBox="0 0 28 28"><circle cx="14" cy="14" r="14" fill="#25A55F"/><path d="M8 14.5l4 4 8-9" stroke="#fff" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg><div class="tx">FREE penghantaran</div></div>
       </div>
-      <a class="btn-tempah" href="#borang" role="button">TEMPAH SEKARANG</a>
+      <a class="btn" href="#borang" role="button">YA, SAYA NAK!</a>
     </div>
 
-    <div class="pk">
-      <div class="c"><span class="lbl">CUBA DULU</span></div>
-      <div class="nm c">Pakej Percubaan</div>
-      <div class="tp c">3 biji · kegunaan 7-15 hari</div>
-      <div class="gb gb-kecil"><img src="https://w.ladicdn.com/64d0957e7550bc001218243b/3-biji-soloco-20251016173105-atvqf.png" alt="3 biji Soloco Candy" width="289" height="254"></div>
-      <div class="hrg">RM60</div>
-      <div class="ls">
-        <div class="baris"><svg class="ik" viewBox="0 0 28 28"><circle cx="14" cy="14" r="14" fill="#25A55F"/><path d="M8 14.5l4 4 8-9" stroke="#fff" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg><div class="tx">3 biji Soloco Candy</div></div>
-        <div class="baris"><svg class="ik" viewBox="0 0 28 28"><circle cx="14" cy="14" r="14" fill="#25A55F"/><path d="M8 14.5l4 4 8-9" stroke="#fff" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg><div class="tx">COD percuma</div></div>
+    <div class="selamat">
+      <div class="kad-s">
+        <div class="t">POS KE OFIS? <span class="emas">TAK KANTOI.</span></div>
+        <p class="s">Nama produk TAK ditulis pada bungkusan. Rakan sepejabat, jiran atau posmen takkan tahu apa yang abang beli.</p>
+        <img src="https://cdn.jsdelivr.net/gh/irwanpauzi/soloco-ladi@6a2fa5653e0a7e261523ab0f161b575d92fbc618/img/parcel-rahsia.webp" alt="Bungkusan sebenar, nama produk tidak ditulis" width="600" height="484">
       </div>
-      <a class="btn-tempah" href="#borang" role="button">TEMPAH SEKARANG</a>
+      <div class="kad-s">
+        <div class="t">BARANG SAMPAI <span class="emas">BARU BAYAR</span></div>
+        <p class="s">COD seluruh Malaysia. Tak perlu bank in. Bayar terus kepada courier bila barang sampai.</p>
+        <img src="https://w.ladicdn.com/64d0957e7550bc001218243b/cod-barang-sampai-baru-bayar-20251016172048-hc8ap.gif" alt="COD, barang sampai baru bayar" width="1030" height="1180">
+      </div>
     </div>
-
-    <p class="terhad">*Free gift terhad kepada 50 pembeli terawal di website ini</p>
+    <p class="terhad kelip">*Free gift terhad kepada 50 pembeli terawal di website ini</p>
     <div class="jamin">
-      <div class="a"><svg viewBox="0 0 30 30"><path d="M4 9h22v14H4z M4 14h22 M9 19h5" stroke="#F2C14E" stroke-width="2.2" fill="none" stroke-linejoin="round" stroke-linecap="round"/></svg><div class="t">Barang sampai baru bayar</div></div>
-      <div class="a"><svg viewBox="0 0 30 30"><path d="M5 10l10-5 10 5v11l-10 5-10-5z M5 10l10 5 10-5 M15 15v11" stroke="#F2C14E" stroke-width="2.2" fill="none" stroke-linejoin="round"/></svg><div class="t">Nama produk dirahsiakan</div></div>
-      <div class="a"><svg viewBox="0 0 30 30"><path d="M15 3l10 4v8c0 6-4 10-10 12C9 25 5 21 5 15V7z M10 15l4 4 7-8" stroke="#F2C14E" stroke-width="2.2" fill="none" stroke-linejoin="round" stroke-linecap="round"/></svg><div class="t">Jaminan wang dikembalikan*</div></div>
+      <div class="a"><svg viewBox="0 0 32 32"><path d="M4 9h24v15H4z M4 14h24 M9 20h6" stroke="#FFC93C" stroke-width="2.4" fill="none" stroke-linejoin="round" stroke-linecap="round"/></svg><div class="t">Barang sampai baru bayar</div></div>
+      <div class="a"><svg viewBox="0 0 32 32"><path d="M16 3l11 4v9c0 6-5 11-11 13C10 27 5 22 5 16V7z M11 16l4 4 7-8" stroke="#FFC93C" stroke-width="2.4" fill="none" stroke-linejoin="round" stroke-linecap="round"/></svg><div class="t">Jaminan wang dikembalikan*</div></div>
     </div>
-    <p class="tc">*Jika penghantaran rosak, tidak berkesan atau tertangguh. T&amp;C</p>
+    <p class="tc">*Jika penghantaran rosak, tidak berkesan atau tertangguh. T&amp;C. Tawaran hari ini dan di website ini sahaja.</p>
   </div>
 </section>
 
-<!-- 9 BORANG -->
+<!-- 10 BORANG -->
 <section id="borang">
   <div class="in">
-    <h2 class="anton c">Borang Tempahan</h2>
-    <p class="sub c">Abang bayar bila barang sampai.</p>
+    <h2 class="A c tajuk">ISI SEKARANG, BAYAR BILA SAMPAI</h2>
+    <p class="sub c">Ambil masa kurang 1 minit.</p>
     <div class="kad-borang">
       <form>
         <label for="pakej-pilih">Pilih Pakej*</label>
         <select id="pakej-pilih" name="pakej" required>
           <option value="" disabled selected>Pilih pakej anda</option>
           <option value="Pakej Terlaris RM99">Pakej Terlaris: 1 Tin (12 biji) RM99</option>
-          <option value="Pakej Terjimat RM180">Pakej Terjimat: 2 Tin (24 biji) RM180</option>
-          <option value="Pakej Percubaan RM60">Pakej Percubaan: 3 biji RM60</option>
+          <option value="Pakej Terjimat RM170">Pakej Terjimat: 2 Tin (24 biji) RM170</option>
         </select>
         <label for="nama">Nama*</label>
         <input id="nama" name="name" type="text" placeholder="Nama penuh" required>
@@ -403,14 +476,14 @@ details p{font-size:18px;color:#333;margin:8px 0 0}
         <button type="submit">TEMPAH SEKARANG</button>
       </form>
     </div>
-    <p class="nota">Pihak courier akan hubungi abang untuk buat penghantaran.</p>
+    <p class="nota">Courier akan hubungi abang untuk penghantaran.</p>
   </div>
 </section>
 
-<!-- 10 FAQ -->
+<!-- 11 FAQ -->
 <section id="faq">
   <div class="in">
-    <h2 class="anton c">Soalan Lazim</h2>
+    <h2 class="A c tajuk">SOALAN LAZIM</h2>
     <div class="kad-faq">
       <details><summary>Macam mana nak tahu ini original?</summary><p>Soloco original datang dalam tin emas panjang, sachet coklat gelap berjalur emas, dan candy berbentuk segi tiga. Beli terus dari website rasmi ini.</p></details>
       <details><summary>1 tin ada berapa biji?</summary><p>1 tin Soloco Candy ada 12 biji. 1 biji untuk 4 hari penggunaan.</p></details>
@@ -423,7 +496,7 @@ details p{font-size:18px;color:#333;margin:8px 0 0}
 
 <section id="penutup">
   <div class="in">
-    <div class="nm">Soloco Candy Original HQ</div>
+    <div class="nm">SOLOCO CANDY ORIGINAL HQ</div>
     <p class="d">Disclaimer: Facebook is a registered Trademark of Facebook.com. The site https://www.solocomalaysia.com is not affiliated with Facebook.com in any way, nor does they sponsor or approve any products. All trademarks mentioned here are copyrighted by their respective owners.</p>
   </div>
 </section>
