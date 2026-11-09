@@ -197,12 +197,12 @@ section{width:100%}
 .rk-n{font-weight:800;font-size:18px;color:#120405;line-height:1.25}
 .rk-d{font-size:16px;color:#666}
 .rk-l{display:flex;justify-content:space-between;gap:10px;padding:8px 0 0}
-.rk-l .a{font-size:16px;color:#333}
-.rk-l .b{font-size:16px;font-weight:800;color:#120405}
+.rk-l .a{flex:1;font-size:16px;color:#333}
+.rk-l .b{flex:0 0 150px;width:150px;text-align:right;font-size:16px;font-weight:800;color:#120405}
 .rk-l .hijau{color:#16A34A}
 .rk-j{display:flex;justify-content:space-between;align-items:center;margin:12px 0 0;padding:12px 0 0;border-top:2px solid #120405}
 .rk-j .a{font-weight:800;font-size:18px;color:#120405}
-.rk-j .b{font-family:'Anton',sans-serif;font-size:34px;line-height:1;color:#E00000}
+.rk-j .b{flex:0 0 170px;width:170px;text-align:right;font-family:'Anton',sans-serif;font-size:34px;line-height:1;color:#E00000}
 .tamat3{font-weight:800;font-size:18px;color:#8A0000;text-align:center;margin:16px 0 8px}
 .jam-borang .o{background:#E00000;color:#fff}
 .jam-borang i{color:#fff}
@@ -211,14 +211,14 @@ section{width:100%}
 .jam-bump span{font-size:28px}
 .jam-bump i{font-size:11px;color:#fff}
 .bump .bg{max-width:260px;margin:8px auto 0}
-.bump-atas{background:#FFF3B0;background-color:#FFF3B0;border:3px dashed #E00000;border-bottom:0;border-radius:14px 14px 0 0;padding:14px 14px 6px;margin:20px 0 0}
+.bump-atas{background:#FFF3B0;background-color:#FFF3B0;border:3px dashed #E00000;border-bottom:0;border-radius:14px 14px 0 0;padding:14px 14px 14px;margin:20px 0 0}
 .bump-atas .bt{font-family:'Anton',sans-serif;font-size:22px;line-height:1.15;color:#E00000;text-align:center}
 .bump-atas .bt2{display:block;background:#E00000;background-color:#E00000;color:#fff;font-family:'Anton',sans-serif;font-size:26px;line-height:1.2;text-align:center;border-radius:10px;padding:8px 6px;margin:8px 0 0}
 .bump-atas .bs-kecil{font-size:17px;font-weight:700;color:#120405;text-align:center;margin:8px 0 0}
 .bump-atas .bs-besar{display:block;background:#FFC93C;background-color:#FFC93C;color:#B00000;font-family:'Anton',sans-serif;font-size:34px;line-height:1.1;text-align:center;border:3px solid #E00000;border-radius:12px;padding:8px 6px;margin:4px 0 0}
 .bump-atas .bs{font-size:17px;font-weight:400;color:#120405;margin:6px 0 0;text-align:center;line-height:1.45}
 .bump-atas .bg{max-width:260px;margin:8px auto 0}
-.bump-bawah{display:flex;align-items:center;gap:10px;background:#FFF3B0;background-color:#FFF3B0;border:3px dashed #E00000;border-top:0;border-radius:0 0 14px 14px;padding:8px 14px 14px}
+.bump-bawah{display:flex;align-items:center;gap:10px;background:#fff;background-color:#fff;border:3px dashed #E00000;border-top:0;border-radius:0 0 14px 14px;padding:8px 14px 14px}
 .bump-bawah input{width:26px;height:26px;flex:0 0 26px;padding:0;accent-color:#E00000}
 .bump-bawah label{margin:0;font-size:18px;font-weight:800;line-height:1.2;color:#120405}
 .jam-borang .o{background:#E00000;color:#fff}
@@ -617,12 +617,14 @@ document.querySelectorAll('[data-slide]').forEach(function(b){b.onclick=function
   },true);
   // Timer dalam kotak bump: kemas kini teks "TAMAT DALAM .." setiap saat (tamat 11:59 malam)
   function pad(n){return (n<10?'0':'')+n;}
+  var sasaran=null;
   function detik(){
+    if(!sasaran) sasaran=[].slice.call(document.querySelectorAll('div,p,span,h1,h2,h3')).filter(function(el){
+      return el.children.length===0 && /^TAMAT DALAM \d\d : \d\d : \d\d$/.test(el.textContent.trim());
+    });
     var n=new Date(),e=new Date(n);e.setHours(23,59,59,999);var t=Math.max(0,Math.floor((e-n)/1000));
     var teks='TAMAT DALAM '+pad(Math.floor(t/3600))+' : '+pad(Math.floor(t%3600/60))+' : '+pad(t%60);
-    [].slice.call(document.querySelectorAll('div,p,span,h1,h2,h3')).forEach(function(el){
-      if(el.children.length===0 && /^TAMAT DALAM \d\d : \d\d : \d\d$/.test(el.textContent.trim())) el.textContent=teks;
-    });
+    sasaran.forEach(function(el){ el.textContent=teks; });
   }
   detik(); setInterval(detik,1000);
 })();
