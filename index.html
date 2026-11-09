@@ -190,10 +190,20 @@ section{width:100%}
 .jam-gelap .o{background:#FFC93C;color:#120405}
 .jam-gelap i{color:#120405}
 .bump-hint{font-size:16px;font-weight:700;color:#FFC93C;text-align:center;margin:12px 0 0}
-.ringkas{background:#FFF6E0;border-radius:12px;padding:12px 14px;margin:0 0 4px;text-align:center}
-.rk-t{font-size:15px;font-weight:700;color:#8A0000}
-.rk-p{font-size:17px;font-weight:800;color:#120405;line-height:1.35;margin:4px 0 0}
-.rk-h{font-family:'Anton',sans-serif;font-size:36px;color:#E00000;line-height:1.1;margin:4px 0 0}
+.ringkas{background:#fff;border:2px solid #EADCCB;border-radius:14px;padding:14px;margin:0 0 6px}
+.rk-h{font-weight:800;font-size:14px;color:#8A0000;padding:0 0 10px;border-bottom:1px solid #EADCCB}
+.rk-pro{display:flex;align-items:center;gap:12px;padding:12px 0;border-bottom:1px solid #EADCCB}
+.rk-pro img{width:96px;flex:0 0 96px}
+.rk-n{font-weight:800;font-size:18px;color:#120405;line-height:1.25}
+.rk-d{font-size:16px;color:#666}
+.rk-l{display:flex;justify-content:space-between;gap:10px;padding:8px 0 0}
+.rk-l .a{font-size:16px;color:#333}
+.rk-l .b{font-size:16px;font-weight:800;color:#120405}
+.rk-l .hijau{color:#16A34A}
+.rk-j{display:flex;justify-content:space-between;align-items:center;margin:12px 0 0;padding:12px 0 0;border-top:2px solid #120405}
+.rk-j .a{font-weight:800;font-size:18px;color:#120405}
+.rk-j .b{font-family:'Anton',sans-serif;font-size:34px;line-height:1;color:#E00000}
+.bump .bg{max-width:260px;margin:8px auto 0}
 .bump{background:#FFF3B0;border:3px dashed #E00000;border-radius:14px;padding:14px;margin:20px 0 0}
 .bump .bt{font-family:'Anton',sans-serif;font-size:22px;line-height:1.15;color:#E00000;text-align:center}
 .bump .bs{font-size:17px;color:#120405;margin:6px 0 10px;text-align:center}
@@ -482,7 +492,18 @@ details p{font-size:18px;color:#333;margin:8px 0 0}
     <p class="sub c">Ambil masa kurang 1 minit.</p>
     <div class="kad-borang">
       <form>
-        <div class="ringkas"><div class="rk-t">Pesanan anda:</div><div class="rk-p">1 Tin Soloco Original (12 biji) + FREE MagicTisu</div><div class="rk-h">RM99</div></div>
+        <div class="ringkas">
+          <div class="rk-h">RINGKASAN PESANAN</div>
+          <div class="rk-pro">
+            <img src="https://cdn.jsdelivr.net/gh/irwanpauzi/soloco-ladi@5acf5f4c67b36e9b83899d1e9606971c67ad01be/img/pakej-terlaris.webp" alt="1 tin Soloco Candy + free MagicTisu" width="650" height="469">
+            <div><div class="rk-n">Soloco Candy Original</div><div class="rk-d">1 Tin, 12 biji</div></div>
+          </div>
+          <div class="rk-l"><div class="a">1 Tin Soloco Candy</div><div class="b">RM99</div></div>
+          <div class="rk-l"><div class="a">FREE 1 kotak MagicTisu</div><div class="b hijau">PERCUMA</div></div>
+          <div class="rk-l"><div class="a">Penghantaran</div><div class="b hijau">PERCUMA</div></div>
+          <div class="rk-l"><div class="a">Bayaran</div><div class="b">COD, bila sampai</div></div>
+          <div class="rk-j"><div class="a">JUMLAH</div><div class="b">RM99</div></div>
+        </div>
         <label for="nama">Nama*</label>
         <input id="nama" name="name" type="text" placeholder="Nama penuh" required>
         <label for="tel">No. Telefon*</label>
@@ -493,6 +514,7 @@ details p{font-size:18px;color:#333;margin:8px 0 0}
         <input id="poskod" name="poskod" type="text" placeholder="Contoh: 43000" required>
         <div class="bump kelip-lembut">
           <p class="bt">TAWARAN DI BORANG INI SAHAJA</p>
+          <div class="bg"><img src="https://cdn.jsdelivr.net/gh/irwanpauzi/soloco-ladi@5acf5f4c67b36e9b83899d1e9606971c67ad01be/img/pakej-terjimat.webp" alt="2 tin Soloco Candy + free MagicTisu + kondom berduri" width="888" height="564"></div>
           <p class="bs">Tukar ke <b>2 TIN, RM170 sahaja</b>. Tambah RM71 je dapat 12 biji lagi + FREE kondom berduri. Jimat RM28 berbanding beli 2 kali.</p>
           <div class="bc"><input id="naik" name="naik_2_tin" type="checkbox" value="YA - TUKAR KE 2 TIN RM170"><label for="naik">YA! Tukar ke 2 TIN, RM170 sahaja</label></div>
         </div>
